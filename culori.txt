@@ -1,0 +1,5 @@
+#2A363B - albastru inchis(bara navigare)
+#99B898 - albastru deschis("despre noi"/
+#FF847C - roz deschis("Cauta un partener")
+#E84A5F - roz inchis("Adopta un prieten")
+#FECEAB - bej(contact)
