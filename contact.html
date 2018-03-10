@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Petrimoniale</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .inputText,.select,textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+      }
+
+      input[type=submit] {
+          background-color: #FF847C;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+          background-color: #E84A5F;
+      }
+
+      .container {
+          
+          display: inline-block;
+          background-color: #ffffff;
+          padding: 5% 5% 0 5%;
+          width: 35%;
+      }
+      
+      .pozaContact {
+          
+          position:fixed;
+          bottom: 0px;
+          left: 50%;
+          background-color: #ffffff;
+          display: inline-block;
+          width: 35%;
+      }
+    </style>
+  </head>
+  
+  <body>
+
+  <div class="topnav">
+      <a  href="home.html">
+        <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
+      </a>
+    
+      <a class="barItem" href="monte.html">Monte</a>
+      <a class="barItem" href="pui.html">Vanzari pui</a>
+      <a class="barItem" href="contact.html">Contact</a>
+  
+      <form action="/action_page.php">
+        <button id="searchButton">
+          Cauta
+        </button>
+        <select>
+          <option></option>
+          <option>Monta</option>
+          <option>Vanzari Pui</option>
+          <option>Adoptii Pui</option>
+        </select>
+        <input type="text" placeholder="Cauta aici..."/>
+      </form>
+    </div>
+    
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="prenume">Prenume</label>
+      <input class="inputText"  type="text" id="prenume" name="prenume" placeholder="Prenume">
+  
+      <label for="nume">Nume</label>
+      <input class="inputText"  type="text" id="nume" name="nume" placeholder="Nume">
+      
+      <label for="email">Email</label>
+      <input class="inputText"  type="text" id="email" name="email" placeholder="Email">
+
+      <label for="subiect">Subiect</label>
+      <select class="select" id="subiect" name="subiect">
+        <option value="monte">Anunturi monte</option>
+        <option value="cumPui">Cumparare pui</option>
+        <option value="vandPui">Vanzare pui</option>
+        <option value="adPui">Adoptii pui</option>
+        <option value="sugestii">Sugestii</option>
+        <option value="other">Alt subiect</option>
+      </select>
+
+      <label for="detalii">Detalii</label>
+      <textarea id="detalii" name="detalii" style="height:100px"> </textarea>
+
+      <input type="submit" value="Trimiteti">
+    </form>
+  </div>
+    <div class="pozaContact">
+      <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpgContact.png?1520689214342" />
+    </div>
+  
+  </body>
+</html>
