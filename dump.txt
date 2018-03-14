@@ -1,0 +1,55 @@
+<style>
+    .ann {
+      display: inline-block;
+      position: relative;
+      left: 20px;
+      margin: 15px;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+  border: 20px solid pink;
+  border-image-source: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png);
+  border-image-slice: 20 22;
+  border-image-repeat: round;
+      }
+      
+      .ann:hover{
+        height: auto;
+      }
+      
+      a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+      .test{
+        display: inline-block;
+        width: 200px;
+      }
+
+    </style>
+    
+    
+    
+    <section >
+
+    <a class="ann" href="https://www.dafk.net/what/" >
+      <img  src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpgContact.png?1520689214342" height="200px" width="200px" style="float:left;"/>       
+      <h1 align="center">
+        TECH DOGGO
+      </h1>     
+      <p>
+        hello! this text is about me and how pawsome I am. i bork only at postman and kids.BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK 
+      </p>      
+    </a>
+
+      
+      <a class="ann" href="https://www.dafk.net/what/" >
+      <img  class="test" src="http://pm1.narvii.com/6303/9b490dfd180b8407370ccd926e07f5f59257d7b1_00.jpg" height="200px" width="200px" style="float:left;"/>       
+        <h1 class="test" align="center" >
+        PROFESSOR DOGGO
+      </h1>     
+      <p class="test">
+        Hello! Je m'appelle Prof. Doc. Dog mcBork. Sometimes i eat a whole passage from a book, but i later puke it back and then i pretend it's alphabet soup and i eat it again. (0 shame)
+      </p>          
+    </a>
+    </section>

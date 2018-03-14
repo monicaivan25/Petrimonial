@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html min-height="100%">
   <head>
     <title>Petrimoniale</title>
     <meta charset="utf-8">
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/styles.css">
     
     <style>
-      body {font-family: Arial, Helvetica, sans-serif;}
 
       .inputText,.select,textarea {
           width: 100%;
@@ -34,41 +33,37 @@
           background-color: #E84A5F;
       }
 
-      .container {
-          
-          display: inline-block;
+      .contact-form-container {
+          float:left;
           background-color: #ffffff;
           padding: 5% 5% 0 5%;
           width: 35%;
+          max-height: 100% !important;
       }
       
-      .pozaContact {
-          
-          position:fixed;
-          bottom: 0px;
-          left: 50%;
-          background-color: #ffffff;
-          display: inline-block;
-          width: 35%;
+      .bg {
+        background-image: url("https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FdoggoBGSmall.png?1521023455801");
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
+
     </style>
   </head>
   
-  <body>
-
-  <div class="topnav">
+  <body class = "bg">
+    <header class="navigation-bar">
       <a  href="home.html">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
       </a>
     
-      <a class="barItem" href="monte.html">Monte</a>
-      <a class="barItem" href="pui.html">Vanzari pui</a>
-      <a class="barItem" href="contact.html">Contact</a>
+      <a class="bar-item" href="monte.html">Monte</a>
+      <a class="bar-item" href="pui.html">Vanzari pui</a>
+      <a class="bar-item" href="contact.html">Contact</a>
   
       <form action="/action_page.php">
-        <button id="searchButton">
-          Cauta
-        </button>
+        <button id="search-button">Cauta</button>
         <select>
           <option></option>
           <option>Monta</option>
@@ -77,38 +72,35 @@
         </select>
         <input type="text" placeholder="Cauta aici..."/>
       </form>
+    </header>
+
+    <div class="contact-form-container">
+      <form action="/action_page.php">
+        <label for="prenume">Prenume</label>
+        <input class="inputText"  type="text" id="prenume" name="prenume" placeholder="Prenume">
+
+        <label for="nume">Nume</label>
+        <input class="inputText"  type="text" id="nume" name="nume" placeholder="Nume">
+
+        <label for="email">Email</label>
+        <input class="inputText"  type="text" id="email" name="email" placeholder="Email">
+
+        <label for="subiect">Subiect</label>
+        <select class="select" id="subiect" name="subiect">
+          <option value="monte">Anunturi monte</option>
+          <option value="cumPui">Cumparare pui</option>
+          <option value="vandPui">Vanzare pui</option>
+          <option value="adPui">Adoptii pui</option>
+          <option value="sugestii">Sugestii</option>
+          <option value="other">Alt subiect</option>
+        </select>
+
+        <label for="detalii">Detalii</label>
+        <textarea id="detalii" name="detalii" style="height:100px"> </textarea>
+
+        <input type="submit" value="Trimiteti">
+      </form>
     </div>
-    
-  <div class="container">
-    <form action="/action_page.php">
-      <label for="prenume">Prenume</label>
-      <input class="inputText"  type="text" id="prenume" name="prenume" placeholder="Prenume">
-  
-      <label for="nume">Nume</label>
-      <input class="inputText"  type="text" id="nume" name="nume" placeholder="Nume">
-      
-      <label for="email">Email</label>
-      <input class="inputText"  type="text" id="email" name="email" placeholder="Email">
 
-      <label for="subiect">Subiect</label>
-      <select class="select" id="subiect" name="subiect">
-        <option value="monte">Anunturi monte</option>
-        <option value="cumPui">Cumparare pui</option>
-        <option value="vandPui">Vanzare pui</option>
-        <option value="adPui">Adoptii pui</option>
-        <option value="sugestii">Sugestii</option>
-        <option value="other">Alt subiect</option>
-      </select>
-
-      <label for="detalii">Detalii</label>
-      <textarea id="detalii" name="detalii" style="height:100px"> </textarea>
-
-      <input type="submit" value="Trimiteti">
-    </form>
-  </div>
-    <div class="pozaContact">
-      <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpgContact.png?1520689214342" />
-    </div>
-  
-  </body>
+    </body>
 </html>
