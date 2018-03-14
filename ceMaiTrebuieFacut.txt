@@ -1,0 +1,18 @@
+1) nav bar: 
+    Add login dreapta sus
+    Remove search bar / sa o punem dedesubt sau ceva
+    nu se vede culoarea la pagina activa/ nu poti vedea pe ce pagina esti(avem clasa..da nu merge)
+    * eventual scos marginea alba /whitespace-ul din jurul barei -Monica //DONE
+2) login page
+3) signup page
+4) monte + adoptii(la fel more or less)
+5) fixat tech doggo - Monica//DONE
+6) add "top" button - care sa te duca in topul paginii daca ai dat scroll
+7) redenumit clase css - Monica //DONE
+8) media query la TOT
+
+
+trebuie sa lucram "curat semantic" !important (hoho)
+  a.k.a denumit clase sugestiv shit like that
+
+
