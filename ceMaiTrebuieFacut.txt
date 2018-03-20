@@ -11,11 +11,11 @@
     -anunturi -- silviu (done)
     -contact -monica (done)
     -login - monica (done)
-    -template_anunt - silviu 
+    -template_anunt - silviu (done)
 9) pagina adauga anunt - silviu (done)
-10) template de anunt - silviu
-11) despre noi - silviu
-12) buton share fb ... pus tempalte anunt.
+10) template de anunt - silviu  (done)
+11) despre noi - silviu  (done)
+12) buton share fb ... pus tempalte anunt. (done)
 
 trebuie sa lucram "curat semantic" !important (hoho)
   a.k.a denumit clase sugestiv shit like that

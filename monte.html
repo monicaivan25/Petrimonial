@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
 * {
     box-sizing: border-box;
@@ -80,7 +81,7 @@
   </head>
   <body>
 <!--       NAVBAR       -->
-    <header class="navigation-bar">
+<header class="navigation-bar">
       <a  href="home.html">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
       </a>
@@ -89,9 +90,88 @@
       <a class="bar-item" href="pui2.html">Vanzari pui</a>
       <a class="bar-item" href="anunt.html">Adauga anunt</a>
       <a class="bar-item" href="contact.html">Contact</a>
+     
+      <!--Login/signup Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+          <div class="dropdown-content">
+             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+          </div>
+      </div>  
       
-      <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
-      <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+      <!--Search Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-search"></i></button>
+            <div class="search-bar"> 
+                
+              <div class="search-crit"><div class="search-crit-content">
+                  <button style="background-color:#2A363B; width:10%;"><i class="fa fa-search"></i></button>  
+              </div></div>
+                              
+              <div class="search-crit"><div class="search-crit-content" >
+                <select>
+                  <option value="0">Judet</option>
+                  <option value="Alba">Alba</option>
+                  <option value="Arad">Arad</option>
+                  <option value="Arges">Arges</option>
+                  <option value="Bacau">Bacau</option>
+                  <option value="Bihor">Bihor</option>
+                  <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                  <option value="Botosani">Botosani</option>
+                  <option value="Brasov">Brasov</option>
+                  <option value="Braila">Braila</option>
+                  <option value="Bucuresti">Bucuresti</option>
+                  <option value="Buzau">Buzau</option>
+                  <option value="Caras Severin">Caras Severin</option>
+                  <option value="Calarasi">Calarasi</option>
+                  <option value="Cluj">Cluj</option>
+                  <option value="Constanta">Constanta</option>
+                  <option value="Covasna">Covasna</option>
+                  <option value="Dambovita">Dambovita</option>
+                  <option value="Dolj">Dolj</option>
+                  <option value="Galati">Galati</option>
+                  <option value="Giurgiu">Giurgiu</option>
+                  <option value="Gorj">Gorj</option>
+                  <option value="Harghita">Harghita</option>
+                  <option value="Hunedoara">Hunedoara</option>
+                  <option value="Ialomita">Ialomita</option>
+                  <option value="Iasi">Iasi</option>
+                  <option value="Ilfov">Ilfov</option>
+                  <option value="Maramures">Maramures</option>
+                  <option value="Mehedinti">Mehedinti</option>
+                  <option value="Mures">Mures</option>
+                  <option value="Neamt">Neamt</option>
+                  <option value="Olt">Olt</option>
+                  <option value="Prahova">Prahova</option>
+                  <option value="Satu Mare">Satu Mare</option>
+                  <option value="Salaj">Salaj</option>
+                  <option value="Sibiu">Sibiu</option>
+                  <option value="Suceava">Suceava</option>
+                  <option value="Teleorman">Teleorman</option>
+                  <option value="Timis">Timis</option>
+                  <option value="Tulcea">Tulcea</option>
+                  <option value="Vaslui">Vaslui</option>
+                  <option value="Valcea">Valcea</option>
+                  <option value="Vrancea">Vrancea</option>
+                </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                  <select>
+                    <option value="0">Categorie</option>
+                    <option value="Monte">Monte</option>
+                    <option value="Vanzari">Vanzari</option>
+                    <option value="Adoptii">Adoptii</option>
+                </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                   <input type="text" placeholder="Cauta aici">
+              </div></div>
+  
+            </div>
+      </div>  
     </header>
 <!--     ITEMS       -->
     
