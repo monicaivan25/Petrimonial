@@ -1,55 +1,229 @@
-<style>
-    .ann {
-      display: inline-block;
-      position: relative;
-      left: 20px;
-      margin: 15px;
-      width: 200px;
-      height: 200px;
-      overflow: hidden;
-  border: 20px solid pink;
-  border-image-source: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png);
-  border-image-slice: 20 22;
-  border-image-repeat: round;
-      }
-      
-      .ann:hover{
-        height: auto;
-      }
-      
-      a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Petrimoniale</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+      * {
+    box-sizing: border-box;
 }
-      .test{
-        display: inline-block;
-        width: 200px;
-      }
 
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+        
+}
+
+/* Add padding BETWEEN each column */
+.row,.row > .column {
+    padding: 10px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: block; /* Hide all elements by default */
+}
+    @media screen and (max-width: 700px) {
+      .column { width: 100%; } 
+    }
+/* Clear floats after rows */ 
+.row:after {
+      content: "";
+
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: #99B898;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
     </style>
     
+  </head>  
+  
+  
+  <body>
+    <!-- NAVBAR -->
+    <header class="navigation-bar">
+      <a  href="home.html">
+        <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
+      </a>
     
-    
-    <section >
-
-    <a class="ann" href="https://www.dafk.net/what/" >
-      <img  src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpgContact.png?1520689214342" height="200px" width="200px" style="float:left;"/>       
-      <h1 align="center">
-        TECH DOGGO
-      </h1>     
-      <p>
-        hello! this text is about me and how pawsome I am. i bork only at postman and kids.BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK BORK 
-      </p>      
-    </a>
-
+      <a class="bar-item" href="monte.html">Monte</a>
+      <a class="bar-item" href="pui.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
+      <a class="bar-item" href="contact.html">Contact</a>
       
-      <a class="ann" href="https://www.dafk.net/what/" >
-      <img  class="test" src="http://pm1.narvii.com/6303/9b490dfd180b8407370ccd926e07f5f59257d7b1_00.jpg" height="200px" width="200px" style="float:left;"/>       
-        <h1 class="test" align="center" >
-        PROFESSOR DOGGO
-      </h1>     
-      <p class="test">
-        Hello! Je m'appelle Prof. Doc. Dog mcBork. Sometimes i eat a whole passage from a book, but i later puke it back and then i pretend it's alphabet soup and i eat it again. (0 shame)
-      </p>          
-    </a>
+      <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+      <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+    </header>
+    
+    
+    
+    .
+  <!--  BODY -->
+    <div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div> 
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="content">
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+            
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      
+        <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      
+      <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      
+  <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" alt="Car" style="width:100%">
+      <h4>Name</h4>
+      <p>Short description</p>
+    </div>
+  </div>
+
+
+  </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- back to top button -->
+    <a class="back-to-top-button" href="pui.html">Top </a>
+    
+    
+    <section id="body-container">
+      <div class="wrapper">
+        <section class="mainpage-gallery clr" >
+          <ul class="gallerywide clr normal">
+            <li class="wrap tleft rel fleft">
+              <div class="mheight tcenter">
+                <a clas="thumb tdnone scale1 rel detailsLinkPromoted linkWithHash">
+                  <!--<img-->
+                </a>
+              </div>
+              <div class="inner">
+                <!-- link despre content -->
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
+    
+    
+    <!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

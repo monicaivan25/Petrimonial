@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Petrimoniale</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+    .boody {
+      width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 5% 14% 38% 38% 5%;    
+    grid-template-areas: ". sidebar main1 main2 ." 
+                         ". sidebar main3 main4 .";
+    grid-gap: 1.5em;
+      }
+      
+    .main1{
+      grid-area: main1;
+      }
+    .main2{
+      grid-area: main2;
+      }
+      
+    @media only screen and (max-width: 700px) {
+      .boody {
+          grid-template-columns: 0% 90%;    
+          grid-template-areas: ". main1" 
+                               ". main3";
+          grid-gap: 1.4em;
+        }
+        .main2{
+          grid-area: main3; 
+        }
+        aside {
+          display: none; 
+        } 
+      }
+      
+    @media only screen and (max-width: 1000px) and (min-width: 701px) {
+        .boody {
+          grid-template-columns: 1% 45% 45%;    
+          grid-template-areas: ". main1 main2" 
+                               ". main3 main4";
+        }
+        aside {
+          display: none; 
+        }  
+      }
+      
+    aside{
+      grid-area: sidebar;
+      background: lightgray;
+      padding: 2em; 
+      }
+    .card{
+      display: grid;
+      grid-template-colums: 1fr 3fr;
+      grid-template-rows: min-content auto auto;
+      grid-template-areas: 
+        "img title" 
+        "img content"
+        "img content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+    .card-img{
+      height: 100%;
+      max-width: 100%;
+      grid-area: img;
+      background: pink;
+      margin-right: auto;
+      }
+    .card-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: title;
+      
+      }
+    .card-content{
+      grid-area: content;
+      }
+    @media only screen and (max-width: 1600px) {
+      
+    .card{
+      grid-template-columns: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img1" 
+        "img2"
+        "img3";
+      }
+      .card-img{ grid-area: img1; margin: auto !important;}
+      .card-title{ grid-area: img2; }
+      .card-content{ grid-area: img3; }
+      
+      }
+      
+      a{  color: inherit; 
+      text-decoration: none;}
+
+      
+    </style>
+    </head>  
+  
+  
+  <body>
+    <!-- NAVBAR -->
+    <header class="navigation-bar">
+      <a  href="home.html">
+        <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
+      </a>
+    
+      <a class="bar-item" href="monte.html">Monte</a>
+      <a class="bar-item" href="pui.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
+      <a class="bar-item" href="contact.html">Contact</a>
+      
+      <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+      <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+    </header>
+    
+    
+    <!--BODY-->
+   <div class="boody">
+                                                                       <!-- MAIN 1 -->
+    <main class="main1">
+
+      <div class="card">        
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Short description about your pet.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fwallhaven-235456.jpg?1521475221294" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+     </main>
+                                                                       <!-- MAIN 2 -->
+     <main class="main2">
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>.tare siuq des suirav dnefiele euqen te maid tu cenoD .sutcul cen sutcel siuq sutcul siruaM .lev mutnemref mes euqsetnellep tu ,anru repmes ereusop naeneA .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(1).jpg?1521402035661" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+    
+    
+    </main>
+    
+    <aside>
+      <h1>Sidebar stuff</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat. In tempor pharetra felis at fermentum. Maecenas iaculis neque orci, sit amet sodales quam venenatis sit amet. Praesent eu enim nec velit bibendum accumsan a sed tellus. Aenean sed justo a tortor hendrerit imperdiet efficitur nec risus. Morbi gravida mi quis ultrices elementum. Pellentesque fermentum sodales sagittis. Sed vel efficitur nisl. Ut congue sodales sapien. Duis ultricies felis nunc, eu semper est tincidunt eu. Curabitur faucibus luctus eros, eget semper mauris dictum vel.</p>
+    </aside>
+  </div> 
+    <!--\BODY-->
+    
+    
+    <!-- back to top button -->
+    <a class="back-to-top-button" href="pui2.html">Top </a>
+       
+    <!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

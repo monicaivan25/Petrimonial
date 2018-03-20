@@ -6,9 +6,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
+    
+    <style>
+      * {
+    box-sizing: border-box;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+        
+}
+
+/* Add padding BETWEEN each column */
+ul {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 20px
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  list-style-type: none;
+  margin-top: 20px
+}
+
+li {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+
+}
+
+.tex {
+
+  width: 300px;
+  height: 100px;
+  background-color: inherit;
+}
+
+.content {
+  background-color: #E84A5F;
+  height: 400px;
+  width: 300px;
+  text-align: center;
+}
+
+.frame {
+    height: 300px;      /* equals max image height */
+    width: 300px;
+    background-color: inherit;
+    white-space: nowrap;
+    
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.frame > img {
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 270px;
+}
+
+
+a{  color: inherit; 
+      text-decoration: none;}
+      
+    </style>
+    
   </head>  
   
+  
   <body>
+    <!-- NAVBAR -->
     <header class="navigation-bar">
       <a  href="home.html">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
@@ -16,19 +90,195 @@
     
       <a class="bar-item" href="monte.html">Monte</a>
       <a class="bar-item" href="pui.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
       <a class="bar-item" href="contact.html">Contact</a>
-  
-      <form action="/action_page.php">
-        <button id="search-button">Cauta</button>
-        <select>
-          <option></option>
-          <option>Monta</option>
-          <option>Vanzari Pui</option>
-          <option>Adoptii Pui</option>
-        </select>
-        <input type="text" placeholder="Cauta aici..."/>
-      </form>
+      
+      <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+      <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
     </header>
     
+    
+    
+    
+  <!--  BODY -->
+    <div class="main">
+      <ul>
+        <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.hyperdev.com/click-me.svg?1477239469954" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+
+
+
+  <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+
+
+
+  <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(7).jpg?1521402347795" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+        
+        <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(7).jpg?1521402347795" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+        
+        <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(7).jpg?1521402347795" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+        
+        <li>
+
+    <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">
+
+      <div class="content">
+        <div class="frame">
+          <span class="helper"></span>
+          <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(7).jpg?1521402347795" />
+        </div>
+
+        <div class="tex">
+          
+          <h4>Name</h4>
+          <p>Short description</p>
+        </div>
+      </div>
+    </a>
+
+  </li>
+      </ul>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- back to top button -->
+    <a class="back-to-top-button" href="pui.html">Top </a>
+       
+    <!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>
   </body>
 </html>
