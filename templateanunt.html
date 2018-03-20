@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Petrimoniale</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+      
+.fb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 40%;
+    background-color: #3b5998;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+      }   
+      
+.container img {
+    width: 100%;
+    height: auto;
+}
+      
+.container {
+        width: 100%;
+      }
+    
+  .hr-container-first{
+     margin-top: 5%;
+    }
+      
+  .hr-container{
+    margin-top: 1%; 
+    }
+         
+main {
+      margin-top: 30px;
+      display: grid;
+      grid-template-rows: auto min-content auto;
+      grid-template-columns: 5% 40% 40% 5%;
+      grid-template-areas: ". img1 desc ."
+                           "titlu titlu titlu titlu"
+                           ". anunt1 anunt2 .";
+      grid-column-gap: 4em;
+      grid-row-gap: 2em;
+  }
+      
+    .img1{
+      grid-area: img1;
+      }
+    .desc{
+      grid-area: desc;
+      }
+    .anunt1{
+      grid-area: anunt1;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 45% 45%;
+      grid-template-areas: "card1 card2";
+      grid-column-gap: 65px;
+      }
+    .anunt2{
+      grid-area: anunt2;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 45% 45%;
+      grid-template-areas: "card3 card4";
+      grid-column-gap: 65px;
+      }
+      
+    .titlu{
+      grid-area: titlu;
+      }
+    .text--titlu{
+      max-width: 99%;
+      }
+      
+    .card1{
+      grid-area: card1;
+      display: grid;
+      grid-template-colums: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img" 
+        "title"
+        "content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+      .card2{
+      grid-area: card2;
+      display: grid;
+      grid-template-colums: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img" 
+        "title"
+        "content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+      .card3{
+      grid-area: card3;
+      display: grid;
+      grid-template-colums: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img" 
+        "title"
+        "content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+      .card4{
+      grid-area: card4;
+      display: grid;
+      grid-template-colums: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img" 
+        "title"
+        "content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+    .card-img{
+      height: 100%;
+      max-width: 100%;
+      grid-area: img;
+      background: pink;
+      margin: auto;
+      }
+    .card-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: title;
+      
+      }
+    .card-content{
+      grid-area: content;
+      }
+      a{  color: inherit; 
+      text-decoration: none;}
+      
+      @media only screen and (max-width: 1200px){
+        main{
+          
+          grid-template-columns: 5% 45% 45%;
+          grid-template-rows: auto auto min-content auto;
+          grid-template-areas: ". img1 img1"
+                               ". desc desc"
+                               ". titlu titlu"
+                               ". anunt1 anunt1";
+          grid-column-gap: 0;
+        }
+        .text-anunt{
+          margin-left :0%;
+        }
+        .anunt1{
+          grid-area: anunt1;
+          grid-column-gap: 1em;
+          margin-left: 5%;
+      }
+        .anunt2{
+          display: none;
+          grid-area: none;
+        }
+        .myhr{
+          margin: 0;
+          width: 100%;
+        }
+      }
+      
+      @media only screen and (max-width: 700px){
+        .anunt1{
+          grid-template-areas: "card1 card1";
+        }
+        .card1{
+          grid-area: card1;
+        }
+        .card2{
+          display: none;
+        }
+      }
+    .text-anunt1{
+      padding-left: 7%
+      }
+    </style>
+    
+  </head>
+  
+  <body class="bg">
+    <header class="navigation-bar">
+      <a  href="home.html">
+        <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
+      </a>
+    
+      <a class="bar-item" href="monte.html">Monte</a>
+      <a class="bar-item" href="pui2.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
+      <a class="bar-item" href="contact.html">Contact</a>
+     
+      <!--Login/signup Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+          <div class="dropdown-content">
+             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+          </div>
+      </div>  
+      
+      <!--Search Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-search"></i></button>
+            <div class="search-bar"> 
+                
+              <div class="search-crit"><div class="search-crit-content">
+                  <button style="background-color:#2A363B; width:10%;"><i class="fa fa-search"></i></button>  
+              </div></div>
+                              
+              <div class="search-crit"><div class="search-crit-content" >
+                <select>
+                  <option value="0">Judet</option>
+                  <option value="Alba">Alba</option>
+                  <option value="Arad">Arad</option>
+                  <option value="Arges">Arges</option>
+                  <option value="Bacau">Bacau</option>
+                  <option value="Bihor">Bihor</option>
+                  <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                  <option value="Botosani">Botosani</option>
+                  <option value="Brasov">Brasov</option>
+                  <option value="Braila">Braila</option>
+                  <option value="Bucuresti">Bucuresti</option>
+                  <option value="Buzau">Buzau</option>
+                  <option value="Caras Severin">Caras Severin</option>
+                  <option value="Calarasi">Calarasi</option>
+                  <option value="Cluj">Cluj</option>
+                  <option value="Constanta">Constanta</option>
+                  <option value="Covasna">Covasna</option>
+                  <option value="Dambovita">Dambovita</option>
+                  <option value="Dolj">Dolj</option>
+                  <option value="Galati">Galati</option>
+                  <option value="Giurgiu">Giurgiu</option>
+                  <option value="Gorj">Gorj</option>
+                  <option value="Harghita">Harghita</option>
+                  <option value="Hunedoara">Hunedoara</option>
+                  <option value="Ialomita">Ialomita</option>
+                  <option value="Iasi">Iasi</option>
+                  <option value="Ilfov">Ilfov</option>
+                  <option value="Maramures">Maramures</option>
+                  <option value="Mehedinti">Mehedinti</option>
+                  <option value="Mures">Mures</option>
+                  <option value="Neamt">Neamt</option>
+                  <option value="Olt">Olt</option>
+                  <option value="Prahova">Prahova</option>
+                  <option value="Satu Mare">Satu Mare</option>
+                  <option value="Salaj">Salaj</option>
+                  <option value="Sibiu">Sibiu</option>
+                  <option value="Suceava">Suceava</option>
+                  <option value="Teleorman">Teleorman</option>
+                  <option value="Timis">Timis</option>
+                  <option value="Tulcea">Tulcea</option>
+                  <option value="Vaslui">Vaslui</option>
+                  <option value="Valcea">Valcea</option>
+                  <option value="Vrancea">Vrancea</option>
+                </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                  <select>
+                    <option value="0">Categorie</option>
+                    <option value="Monte">Monte</option>
+                    <option value="Vanzari">Vanzari</option>
+                    <option value="Adoptii">Adoptii</option>
+                  </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                   <input type="text" placeholder="Cauta aici">
+              </div></div>
+  
+            </div>
+      </div>  
+    </header>
+    
+<!-- back to top button -->
+    <a class="back-to-top-button" href="templateanunt.html">Top </a>
+    
+<!-- nume anunt si categoria -->    
+    <div class="hr-container-first">
+      <hr>
+      
+      <h4 class="text-anunt1" >Nume anunt: ...</h4>
+      
+      <hr>
+    </div>
+    <div class="hr-container-first">
+      <h4 class="text-anunt1">Categoria: ...</h4>
+      
+      <hr>
+    </div>  
+    
+<main>   
+<!-- imaginea cu animalul respectiv -->
+  <div class="img1">
+
+  <div class="container">
+    <a target="_blank">
+      <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fwallhaven-635199.jpg?1521491111285" alt="Fjords" width="300" height="200">
+    </a>
+  </div>
+        
+  </div>
+    
+<!-- detaliile anuntului -->
+  <div class="desc">
+
+   <div class="container">
+      <label> ceva</label>
+      <input type="text">
+      <label> ceva</label>
+      <input type="text">
+      <label> ceva</label>
+      <input type="text">
+      <label> ceva</label>
+  </div>
+    <br>
+    <a class="fb" href="https://www.facebook.com">DISTRIBUIE PE FACEBOOK</a>
+        
+  </div>
+    
+<!-- anunturi similare --> 
+<div class="titlu">
+  <div class="text--titlu">
+      <h4 class="text-anunt">Anunturi similare</h4>      
+      <hr class="myhr">
+  </div>
+</div>
+ 
+  <div class="anunt1">
+
+      <div class="card1">        
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+        
+      </div>
+      <div class="card2">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+    </div>
+            
+  </div>
+    
+  <div class="anunt2">
+
+      <div class="card3">        
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+        
+      </div>
+      <div class="card4">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+        </div>
+    </div>
+            
+  </div>
+</main>
+  
+    <!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

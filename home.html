@@ -6,7 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
+    <style>
+    /* Pentru patrate cu hover over */
+      .container {
+        position: relative;
+        width: 49.5%;
+        display: inline-block;
+      }
+
+      .image {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+      }
+
+      .container:hover .overlay {
+        bottom: 0;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 700px) {
+        .container{
+          width:100%;
+        }
+      }
+
+    </style>
   </head>
   
   <body>
@@ -16,24 +54,100 @@
       </a>
     
       <a class="bar-item" href="monte.html">Monte</a>
-      <a class="bar-item" href="pui.html">Vanzari pui</a>
+      <a class="bar-item" href="pui2.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
       <a class="bar-item" href="contact.html">Contact</a>
+     
+      <!--Login/signup Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+          <div class="dropdown-content">
+             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+          </div>
+      </div>  
+      
+      <!--Search Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-search"></i></button>
+            <div class="search-bar"> 
+                
+              <div class="search-crit"><div class="search-crit-content">
+                  <button style="background-color:#2A363B; width:10%;"><i class="fa fa-search"></i></button>  
+              </div></div>
+                              
+              <div class="search-crit"><div class="search-crit-content" >
+                <select>
+                  <option value="0">Judet</option>
+                  <option value="Alba">Alba</option>
+                  <option value="Arad">Arad</option>
+                  <option value="Arges">Arges</option>
+                  <option value="Bacau">Bacau</option>
+                  <option value="Bihor">Bihor</option>
+                  <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                  <option value="Botosani">Botosani</option>
+                  <option value="Brasov">Brasov</option>
+                  <option value="Braila">Braila</option>
+                  <option value="Bucuresti">Bucuresti</option>
+                  <option value="Buzau">Buzau</option>
+                  <option value="Caras Severin">Caras Severin</option>
+                  <option value="Calarasi">Calarasi</option>
+                  <option value="Cluj">Cluj</option>
+                  <option value="Constanta">Constanta</option>
+                  <option value="Covasna">Covasna</option>
+                  <option value="Dambovita">Dambovita</option>
+                  <option value="Dolj">Dolj</option>
+                  <option value="Galati">Galati</option>
+                  <option value="Giurgiu">Giurgiu</option>
+                  <option value="Gorj">Gorj</option>
+                  <option value="Harghita">Harghita</option>
+                  <option value="Hunedoara">Hunedoara</option>
+                  <option value="Ialomita">Ialomita</option>
+                  <option value="Iasi">Iasi</option>
+                  <option value="Ilfov">Ilfov</option>
+                  <option value="Maramures">Maramures</option>
+                  <option value="Mehedinti">Mehedinti</option>
+                  <option value="Mures">Mures</option>
+                  <option value="Neamt">Neamt</option>
+                  <option value="Olt">Olt</option>
+                  <option value="Prahova">Prahova</option>
+                  <option value="Satu Mare">Satu Mare</option>
+                  <option value="Salaj">Salaj</option>
+                  <option value="Sibiu">Sibiu</option>
+                  <option value="Suceava">Suceava</option>
+                  <option value="Teleorman">Teleorman</option>
+                  <option value="Timis">Timis</option>
+                  <option value="Tulcea">Tulcea</option>
+                  <option value="Vaslui">Vaslui</option>
+                  <option value="Valcea">Valcea</option>
+                  <option value="Vrancea">Vrancea</option>
+                </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                  <select>
+                    <option value="0">Categorie</option>
+                    <option value="Monte">Monte</option>
+                    <option value="Vanzari">Vanzari</option>
+                    <option value="Adoptii">Adoptii</option>
+                </select>
+              </div></div>
+              
+              <div class="search-crit"><div class="search-crit-content">
+                   <input type="text" placeholder="Cauta aici">
+              </div></div>
   
-      <form action="/action_page.php">
-        <button id="search-button">Cauta</button>
-        <select>
-          <option></option>
-          <option>Monta</option>
-          <option>Vanzari Pui</option>
-          <option>Adoptii Pui</option>
-        </select>
-        <input type="text" placeholder="Cauta aici..."/>
-      </form>
+            </div>
+      </div>  
     </header>
     
- <!-- Patrate colorate -->    
+    <!-- back to top button -->
+    <a class="back-to-top-button" href="home.html">Top </a>
+    
+ <!-- Patrate colorate -->   
+    <hr style="width:100%; color:white; border-color:white;">
     <div class="container">
-      <a href="home.html">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fhome.png?1520685517090" alt="Home" class="image">
         <div class="overlay about-us">
           <div class="text">
@@ -50,14 +164,14 @@
         <div class="overlay anunturi-monta">
           <div class="text">
             <h3>CAUTA UN PARTENER</h3>
-            <p>Cauta un partener pentru prietenul tau pufos (wink wink) si fa-i viata mai frumoasa. Cauta in functie de rasa potrivita animalutului tau. </p>
+            <p>Cauta un partener pentru prietenul tau pufos si fa-i viata mai frumoasa.</p>
           </div>
         </div>
       </a>
     </div>
 
     <div class="container">
-      <a href="pui.html">
+      <a href="pui2.html">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fpui.png?1520684329548" alt="Pui" class="image">
         <div class="overlay anunturi-pui">
           <div class="text">
@@ -80,5 +194,46 @@
         </a>
     </div>
 
+<!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>
   </body>
 </html>

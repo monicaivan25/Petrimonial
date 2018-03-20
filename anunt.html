@@ -8,43 +8,119 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
     <style>
      
       button{
         background-color: #E84A5F;
       }
       
-      .contact-form-container {
-          float:left;
+      .formular-container {
           background-color: #ffffff;
-          padding: 5% 5% 0 5%;
-          width: 45%;
+          padding: 5% 0 0 15%;
+          width: 60%;
           max-height: 100% !important;
       }
       
       .bg {
-        background-image: url("https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FdoggoBGSmall.png?1521023455801");
         height: 100%; 
+        positon: relative;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
       
-      @media screen and (max-width: 1000px){
-        .bg{
+   .hr-container-first{
+     margin-top: 5%;
+    }
+      
+  .hr-container{
+    margin-top: 1%; 
+    }
+      
+.submit-button{
+   box-sizing: content-box !important;
+   background-color: #FF7F50;
+   position: absolute;
+   color: white;
+   padding: 15px;
+   text-decoration: none !important;
+   left: 7%;
+   bottom: auto;
+   cursor: pointer;
+   width: 60px; 
+   border-radius: 10px; 
+ }
+
+.submit-button:hover {
+    background-color: red;
+  }
+      
+ @media screen and (max-width: 800px){
+       .bg{
           background: none;
         }
-        .contact-form-container{
-          width:100%;
-          
+   
+        .formular-container{
+          width:90%;
+          padding: 5% 0 0 7%;
+          margin: 0 0 30% 0;
         }
-      }
+   
+   hr{
+     width: 85%;
+   }
+   
+   .text-anunt{
+     width: 60%;
+   }
+}
+      
+ @media screen and (max-width: 700px){
+       .bg{
+          background: none;
+        }
+   
+        .formular-container{
+          width:90%;
+          padding: 5% 0 0 7%;
+          margin: 0 0 30% 0;
+        }
+   
+   hr{
+     width: 85%;
+   }
+   
+   .text-anunt{
+     width: 60%;
+   }
+}
+     
+ @media screen and (max-width: 400px){
+       .bg{
+          background: none;
+        }
+   
+        .formular-container{
+          width:90%;
+          padding: 5% 0 0 7%;
+        }
+   
+   hr{
+     width: 85%;
+   }
+   
+   .text-anunt{
+     width: 60%;
+   }
 
+}
+      
     </style>
   </head>
   
   <body class = "bg">
-<header class="navigation-bar">
+    <header class="navigation-bar">
       <a  href="home.html">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
       </a>
@@ -136,17 +212,111 @@
             </div>
       </div>  
     </header>
- <hr style="width:100%; color:white; border-color:white;">
+    
+    <!-- back to top button -->
+    <a class="back-to-top-button" href="anunt.html">Top </a>
+
+    <div class="hr-container-first">
+      <hr>
+      
+      <h2 class="text-anunt" >Adauga un anunt*</h2>
+      
+      <hr>
+    </div>
+    
+    <div class="hr-container-first">
+      <h4 class="text-anunt" >Informatii proprietar</h4>
+      
+      <hr>
+    </div>
+
+    <div class="formular-container">
+      <form>
+        <label for="prenume">Prenume</label>
+        <input type="text" placeholder="Prenume">
+
+        <label for="nume">Nume</label>
+        <input type="text" placeholder="Nume">
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Email">
+
+        <label for="subiect">Oras</label>
+        <input type="text" placeholder="Oras">
+        
+        <label for="subiect">Adresa</label>
+        <input type="text" placeholder="Adresa">
+      </form>
+    </div>
+      
+    <div class="hr-container">
+      <h4 class="text-anunt" >Descriere animal*</h4>
+      
+      <hr>
+    </div>
+    
+    <div class="formular-container">
+      <form>
+        <label for="nume">Nume</label>
+        <input type="text" placeholder="Nume">
+        
+         <label for="tipanimal">Tip animal</label>
+        <select>
+          <option value="caine">Caine</option>
+          <option value="pisica">Pisica</option>
+        </select>
+        
+        <label for="rasa">Rasa (optional)</label>
+        <input type="text" placeholder="Rasa, daca stii :)">
+        
+        <label for="pret">Pret (optional)</label>
+        <input type="text" placeholder="Pret,  lei">  
+        
+        <label for="tipanunt">Tipul anuntului</label>
+        <select>
+          <option value="vanzari">Vanzari/Adoptii</option>
+          <option value="monte">Monte</option>
+        </select>
+        
+        <label for="detalii">Scurta descrierea a animalului </label>
+        <textarea id="detalii" name="detalii" style="height:100px"> </textarea>
+        
+        <label for="poze">Adauga o poza cu animalul tau</label>
+        <input type="file" name="pic" accept="image/*">
+        
+        <button type="submit">Publica</button>
+     </form>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    <!--
     <div class="contact-form-container">
       <form action="/action_page.php">
         <label for="prenume">Prenume</label>
-        <input type="text" id="prenume" name="prenume" placeholder="Prenume" required>
+        <input type="text" id="prenume" name="prenume" placeholder="Prenume">
 
         <label for="nume">Nume</label>
-        <input type="text" id="nume" name="nume" placeholder="Nume" required>
+        <input type="text" id="nume" name="nume" placeholder="Nume">
 
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email" required>
+        <input type="text" id="email" name="email" placeholder="Email">
 
         <label for="subiect">Subiect</label>
         <select id="subiect" name="subiect">
@@ -158,13 +328,13 @@
           <option value="other">Alt subiect</option>
         </select>
 
-        <label for="detalii">Detalii</label>
-        <textarea id="detalii" name="detalii" style="height:100px"></textarea>
+        <label for="detalii">Descrierea animalutului </label>
+        <textarea id="detalii" name="detalii" style="height:100px"> </textarea>
 
         <button type="submit">Trimiteti</button>
       </form>
     </div>
-
+    
     <!--LOGIN & SIGNUP -->
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
