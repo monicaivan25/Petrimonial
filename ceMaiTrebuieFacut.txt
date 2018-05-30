@@ -1,24 +1,11 @@
-1) nav bar: 
-    Add login dreapta sus + sign up - monica (done)
-  
-2) login page/signup page - monica (done)
-4) monte + adoptii(la fel more or less) - stefan
-8) media query la TOT
-    -navbar --monica(done)
-    -home --monica (done)
-    -monte -- stefan (done)
-    -pui  -- stefan (done)
-    -anunturi -- silviu (done)
-    -contact -monica (done)
-    -login - monica (done)
-    -template_anunt - silviu (done)
-9) pagina adauga anunt - silviu (done)
-10) template de anunt - silviu  (done)
-11) despre noi - silviu  (done)
-12) buton share fb ... pus tempalte anunt. (done)
-
-trebuie sa lucram "curat semantic" !important (hoho)
-  a.k.a denumit clase sugestiv shit like that
+9) baza de date
 
 
-daca nu vi se aseaza ceva calumea in pagina(desi acum ar trebui sa se incadreze totul mai frumos) scrieti box-sizing: content-box !important;
+10) colectat filtre cautare & facut query
+11) colectat date form adauga anunt & facut post catre server - monica
+12) login & inregistrare - silviu
+13) geturi la anunturi - sefan
+14) profilul meu-  anunturile mele - get
+15) profilul meu - recomandari - geturi in functie de filtre similare
+16) raport final (?)
+17) bara search (este nevoie?)

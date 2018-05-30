@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Petrimoniale</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/script.js" defer></script>
     
+    <script> function share_fb(url) {
+    window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+    }
+    window.onload=function(){
+      document.title=document.getElementById('titluAnunt').innerHTML;
+    };
+    </script>
+
     <style>
       
 .fb{
@@ -230,83 +238,35 @@ main {
           <button class="dropbtn"><i class="fa fa-search"></i></button>
             <div class="search-bar"> 
                 
-              <div class="search-crit"><div class="search-crit-content">
-                  <button style="background-color:#2A363B; width:10%;"><i class="fa fa-search"></i></button>  
-              </div></div>
-                              
-              <div class="search-crit"><div class="search-crit-content" >
-                <select>
-                  <option value="0">Judet</option>
-                  <option value="Alba">Alba</option>
-                  <option value="Arad">Arad</option>
-                  <option value="Arges">Arges</option>
-                  <option value="Bacau">Bacau</option>
-                  <option value="Bihor">Bihor</option>
-                  <option value="Bistrita Nasaud">Bistrita Nasaud</option>
-                  <option value="Botosani">Botosani</option>
-                  <option value="Brasov">Brasov</option>
-                  <option value="Braila">Braila</option>
-                  <option value="Bucuresti">Bucuresti</option>
-                  <option value="Buzau">Buzau</option>
-                  <option value="Caras Severin">Caras Severin</option>
-                  <option value="Calarasi">Calarasi</option>
-                  <option value="Cluj">Cluj</option>
-                  <option value="Constanta">Constanta</option>
-                  <option value="Covasna">Covasna</option>
-                  <option value="Dambovita">Dambovita</option>
-                  <option value="Dolj">Dolj</option>
-                  <option value="Galati">Galati</option>
-                  <option value="Giurgiu">Giurgiu</option>
-                  <option value="Gorj">Gorj</option>
-                  <option value="Harghita">Harghita</option>
-                  <option value="Hunedoara">Hunedoara</option>
-                  <option value="Ialomita">Ialomita</option>
-                  <option value="Iasi">Iasi</option>
-                  <option value="Ilfov">Ilfov</option>
-                  <option value="Maramures">Maramures</option>
-                  <option value="Mehedinti">Mehedinti</option>
-                  <option value="Mures">Mures</option>
-                  <option value="Neamt">Neamt</option>
-                  <option value="Olt">Olt</option>
-                  <option value="Prahova">Prahova</option>
-                  <option value="Satu Mare">Satu Mare</option>
-                  <option value="Salaj">Salaj</option>
-                  <option value="Sibiu">Sibiu</option>
-                  <option value="Suceava">Suceava</option>
-                  <option value="Teleorman">Teleorman</option>
-                  <option value="Timis">Timis</option>
-                  <option value="Tulcea">Tulcea</option>
-                  <option value="Vaslui">Vaslui</option>
-                  <option value="Valcea">Valcea</option>
-                  <option value="Vrancea">Vrancea</option>
-                </select>
-              </div></div>
+              <div class="search-crit">
+                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
+              </div>    
               
-              <div class="search-crit"><div class="search-crit-content">
-                  <select>
+              <div class="search-crit">
+                <select>
                     <option value="0">Categorie</option>
                     <option value="Monte">Monte</option>
                     <option value="Vanzari">Vanzari</option>
                     <option value="Adoptii">Adoptii</option>
-                  </select>
-              </div></div>
+                </select>
+              </div>
               
-              <div class="search-crit"><div class="search-crit-content">
-                   <input type="text" placeholder="Cauta aici">
-              </div></div>
+              <div class="search-crit">
+                <input type="text" placeholder="Cauta aici">
+              </div>
   
             </div>
       </div>  
     </header>
     
 <!-- back to top button -->
-    <a class="back-to-top-button" href="templateanunt.html">Top </a>
+    <button onclick="topFunction()" class="back-to-top-button" id="myBtn" title="Go to top">Top</button>
     
 <!-- nume anunt si categoria -->    
     <div class="hr-container-first">
       <hr>
       
-      <h4 class="text-anunt1" >Nume anunt: ...</h4>
+      <h4 class="text-anunt1" >Nume anunt: <span id="titluAnunt">Doru carpatin</span></h4>
       
       <hr>
     </div>
@@ -341,8 +301,11 @@ main {
       <label> ceva</label>
   </div>
     <br>
-    <a class="fb" href="https://www.facebook.com">DISTRIBUIE PE FACEBOOK</a>
-        
+          <i class="fb">
+    <a href="#" onclick="share_fb(document.URL);return false;" rel="nofollow" share_url="document.URL" target="_blank">
+        DISTRIBUIE PE FACEBOOK
+    </a>
+    </i>
   </div>
     
 <!-- anunturi similare --> 
@@ -424,6 +387,12 @@ main {
           <h1>Inregistrare</h1>
           <p>Completati acest formular pentru a va inregistra.</p>
           
+          <label for="nume"><b>Nume</b></label>
+          <input type="text" placeholder="Numele dvs." name="nume" required>  
+        
+          <label for="email"><b>Prenume</b></label>
+          <input type="text" placeholder="Prenumele dvs." name="prenume" required>
+        
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Emailul dvs." name="email" required>
 
