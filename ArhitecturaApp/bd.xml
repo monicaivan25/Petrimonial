@@ -1,0 +1,36 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLState</id><coordinates><x>216</x><y>200</y><w>140</w><h>90</h></coordinates><panel_attributes>users
+
+--
+    - username
+    - parola
+    - email  (pk)
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>486</x><y>200</y><w>150</w><h>200</h></coordinates><panel_attributes>anunturi
+
+--
+      - id_anunt  (pk)
+      - email
+      - numar_telefon
+      - adresa
+      - animal
+      - rasa
+      - pret
+      - tip_anunt
+      - descriere
+      - path folder imagini
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>206</x><y>390</y><w>140</w><h>110</h></coordinates><panel_attributes>mesaje
+
+--
+      - id_mesaj  (pk)
+      - username_1  (fk)
+      - username_2  (fk)
+      - text   
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>486</x><y>420</y><w>150</w><h>80</h></coordinates><panel_attributes>reporturi
+
+--
+      - nr_reporturi
+      - id_anunt  (fk)
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>316</x><y>250</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>180;10;110;10;110;30;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>240</y><w>80</w><h>270</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;250;60;250;60;10;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>172</x><y>240</y><w>70</w><h>250</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>50;230;10;230;10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>171</x><y>430</y><w>70</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element></diagram>

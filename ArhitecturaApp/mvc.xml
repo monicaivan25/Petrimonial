@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>90</x><y>90</y><w>200</w><h>170</h></coordinates><panel_attributes>Controller
+--
+bg=white
+Autentificare
+Inregistrare
+Preluare date contact
+Cere anunturi
+Cere detalii anunt
+Pagina profil
+Adauga anunt
+Stergere anunt</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>90</x><y>270</y><w>200</w><h>190</h></coordinates><panel_attributes>Model
+--
+bg=white
+Users
+Reporturi
+Anunturi
+Autentificare
+Salvare anunturi
+Updatare anunturi
+Stergere anunturi
+Afisare anunturi
+Inregistrare user nou
+Trimite formular contact</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>90</x><y>470</y><w>200</w><h>190</h></coordinates><panel_attributes>Views
+--
+bg=white
+Index
+Home
+Autentificare
+Anunturi pui
+Anunturi monte
+Contact
+Pagina anunt
+Pagina profil
+Adauga anunt
+Stergere anunt</panel_attributes><additional_attributes></additional_attributes></element></diagram>
