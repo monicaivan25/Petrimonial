@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" defer></script>
+    <script src="/script.js" defer></script>
 
     <style>
       
@@ -30,7 +31,7 @@
         display: grid;
         grid-template-rows:  auto min-content auto;
         grid-template-columns: 30% 65%;
-        grid-template-areas:  "image desc"
+        grid-template-areas:  "desc desc"
                              "titlu2 titlu2"
                              "desc1 desc1";
         grid-gap: 3em;
@@ -256,7 +257,6 @@
         <div class="image">
           <div class="container">
            <a target="_blank">
-             <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fwallhaven-635199.jpg?1521491111285" alt="Fjords">
             </a>
           </div>
         </div>
@@ -383,6 +383,12 @@
           <h1>Inregistrare</h1>
           <p>Completati acest formular pentru a va inregistra.</p>
           
+          <label for="nume"><b>Nume</b></label>
+          <input type="text" placeholder="Numele dvs." name="nume" required>  
+        
+          <label for="email"><b>Prenume</b></label>
+          <input type="text" placeholder="Prenumele dvs." name="prenume" required>
+        
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Emailul dvs." name="email" required>
 
