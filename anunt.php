@@ -67,7 +67,7 @@ if ($uploadOk == 0) {
 <!DOCTYPE html>
 <html min-height="100%">
   <head>
-    <title>Contacteaza-ne</title>
+    <title>Anunt adaugat!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
