@@ -169,25 +169,25 @@
 
     <div id="signup" class="modal">
       <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
-      <form class="modal-content" action="action_page.php">
+      <form class="modal-content" method="POST" action="register.php">
           <h1>Inregistrare</h1>
           <p>Completati acest formular pentru a va inregistra.</p>
 
           <label for="nume"><b>Nume</b></label>
-          <input type="text" placeholder="Username" name="username" required>  
+          <input type="text" placeholder="Username" name="username" >  
         
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Emailul dvs." name="email" required>
+          <input type="text" placeholder="Emailul dvs." name="email" >
 
           <label for="psw"><b>Parola</b></label>
-          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" >
 
           <label for="psw-repeat"><b>Repetati parola</b></label>
-          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" >
 
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
-            <button type="submit" class="signupbtn">Inregistrare</button>
+            <button type="submit" name="inregistrare" class="signupbtn">Inregistrare</button>
           </div>
       </form>
     </div>
