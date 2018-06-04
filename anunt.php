@@ -30,29 +30,26 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+        $_SESSION['Error'] = "Fisierul este o imagine - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        $_SESSION['Error'] = "Fisierul incarcat nu este o imagine.";
         $uploadOk = 0;
     }
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000000) {
-    echo "Sorry, your file is too large.";
+    $_SESSION['Error'] = "Ne pare rau, dimensiunea pozei este prea mare.";
     $uploadOk = 0;
 }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $_SESSION['Error'] = "Poza nu s-a putut incarca, doar fisierele de tip JPG, JPEG, PNG & GIF sunt permise.";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
+if ($uploadOk != 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		$result=mysqli_query($conn,"INSERT INTO `anunturi` ( `numar_telefon`, `oras`, `judet`, `nume_animal`, `tip_animal`, `rasa`, `pret`, `tip_anunt`, `descriere`,`path`) VALUES ('".$numar_telefon."','".$oras."','" .$judet."','".$nume_animal."', '".$tip_animal."', '".$rasa."', '".$pret."', '".$tip_anunt."', '".$descriere."','".$target_file."')");    
 	} else {
@@ -71,9 +68,9 @@ if ($uploadOk == 0) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/script.js" defer></script>
+    <script src="script.js" defer></script>
 
     <style>
      
@@ -159,6 +156,14 @@ if ($uploadOk == 0) {
 
     
     <div style="color: white;padding: 100px;">
+    	<?php if( isset($_SESSION['Error']) )
+		{
+        	echo $_SESSION['Error'];
+
+        	unset($_SESSION['Error']);
+
+		}
+		?>
   <h2>
   
     Anunt adaugat!</h2> <h3>
