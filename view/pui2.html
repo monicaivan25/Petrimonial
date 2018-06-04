@@ -10,6 +10,9 @@
         <script src="script.js" defer></script>
 
     <style>
+    body{
+      position: relative;
+    }
     .boody {
       width: 100%;
     display: grid;
@@ -60,8 +63,8 @@
       }
     .card{
       display: grid;
-      grid-template-colums: 1fr 3fr;
-      grid-template-rows: min-content auto auto;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: min-content min-content min-content;
       grid-template-areas: 
         "img title" 
         "img content"
@@ -260,6 +263,7 @@
     </main>
     
     <aside>
+      <div style="position:sticky; position: -webkit-sticky; top:0;">
       <h2>  SEX  </h2>
       <form>
         <input type="radio" name="gender" value="male" checked> Mascul<br>
@@ -334,6 +338,7 @@
       <button id="filtreaza" style="background: #2A363B;">
         Filtreaza
       </button>
+    </div>
     </aside>
   </div> 
     <!--\BODY-->
@@ -389,4 +394,4 @@
     </div>
   </body>
 
-</html>
+</html>4
