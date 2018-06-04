@@ -54,10 +54,9 @@ if ($uploadOk != 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		$result = insertData($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $rasa, $pret, $tip_anunt, $descriere, $target_file);    
 	} else {
-        echo "Auleu buba.";
+        $_SESSION['Error'] = "Auleu buba la up.";
     }
 }
-
 
 	mysqli_close($conn);
 ?>
