@@ -1,6 +1,7 @@
 <?php
 
-	$servername = "localhost";
+	include ('./model.php');
+	/*$servername = "localhost";
 	$user = "root";
 	$password = "";
 	$dbname = "tw_2018";
@@ -8,7 +9,7 @@
 	if(!$conn){
 		die("<p>Eroare la conectarea la baza de date, va rugam reincercati mai tarziu</p>   " . mysqli_connect_error());
 	}
-	else    {
+	else    {*/
 		
 	$numar_telefon = $_POST['numar_telefon'];
 	$oras = $_POST['oras'];
@@ -51,12 +52,12 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk != 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		$result=mysqli_query($conn,"INSERT INTO `anunturi` ( `numar_telefon`, `oras`, `judet`, `nume_animal`, `tip_animal`, `rasa`, `pret`, `tip_anunt`, `descriere`,`path`) VALUES ('".$numar_telefon."','".$oras."','" .$judet."','".$nume_animal."', '".$tip_animal."', '".$rasa."', '".$pret."', '".$tip_anunt."', '".$descriere."','".$target_file."')");    
+		$result = insertData($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $rasa, $pret, $tip_anunt, $descriere, $target_file);    
 	} else {
         echo "Auleu buba.";
     }
 }
-}
+
 
 	mysqli_close($conn);
 ?>
