@@ -1,0 +1,397 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Anunturi pui</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="script.js" defer></script>
+
+    <style>
+    body{
+      position: relative;
+    }
+    .boody {
+      width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1% 14% 38% 38% 5%;    
+    grid-template-areas: ". sidebar main1 main2 ." 
+                         ". sidebar main3 main4 .";
+    grid-gap: 1.5em;
+      }
+      
+    .main1{
+      grid-area: main1;
+      }
+    .main2{
+      grid-area: main2;
+      }
+      
+    @media only screen and (max-width: 700px) {
+      .boody {
+          grid-template-columns: 0% 90%;    
+          grid-template-areas: ". main1" 
+                               ". main3";
+          grid-gap: 1.4em;
+        }
+        .main2{
+          grid-area: main3; 
+        }
+        aside {
+          display: none; 
+        } 
+      }
+      
+    @media only screen and (max-width: 1000px) and (min-width: 701px) {
+        .boody {
+          grid-template-columns: 1% 45% 45%;    
+          grid-template-areas: ". main1 main2" 
+                               ". main3 main4";
+        }
+        aside {
+          display: none; 
+        }  
+      }
+      
+    aside{
+      grid-area: sidebar;
+      background: #99B898;
+      padding: 2em; 
+      }
+    .card{
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: min-content min-content min-content;
+      grid-template-areas: 
+        "img title" 
+        "img content"
+        "img content";
+      grid-column-gap: 1.5em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      }
+    .card-img{
+      height: 100%;
+      max-width: 100%;
+      grid-area: img;
+      background: pink;
+      margin-right: auto;
+      }
+    .card-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: title;
+      
+      }
+    .card-content{
+      grid-area: content;
+      }
+    @media only screen and (max-width: 1600px) {
+      
+    .card{
+      grid-template-columns: auto;
+      grid-template-rows: 15em min-content auto;
+      grid-template-areas: 
+        "img1" 
+        "img2"
+        "img3";
+      }
+      .card-img{ grid-area: img1; margin: auto !important;}
+      .card-title{ grid-area: img2; }
+      .card-content{ grid-area: img3; }
+      
+      }
+      
+      a{  color: inherit; 
+      text-decoration: none;}
+
+      
+    </style>
+    </head>  
+  
+  
+  <body>
+    <!-- NAVBAR -->
+    <header class="navigation-bar">
+      <a  href="home.html">
+        <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
+      </a>
+    
+      <a class="bar-item" href="monte.html">Monte</a>
+      <a class="bar-item" href="pui2.html">Vanzari pui</a>
+      <a class="bar-item" href="anunt.html">Adauga anunt</a>
+      <a class="bar-item" href="contact.html">Contact</a>
+     
+      <!--Login/signup Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+          <div class="dropdown-content">
+             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+          </div>
+      </div>  
+      
+      <!--Search Menu-->
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-search"></i></button>
+            <div class="search-bar"> 
+                
+              <div class="search-crit">
+                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
+              </div>    
+              
+              <div class="search-crit">
+                <select>
+                    <option value="0">Categorie</option>
+                    <option value="Monte">Monte</option>
+                    <option value="Vanzari">Vanzari</option>
+                    <option value="Adoptii">Adoptii</option>
+                </select>
+              </div>
+              
+              <div class="search-crit">
+                <input type="text" placeholder="Cauta aici">
+              </div>
+  
+            </div>
+      </div>  
+    </header>
+    
+    
+    <!--BODY-->
+   <div class="boody">
+                                                                       <!-- MAIN 1 -->
+    <main class="main1">
+
+      <div class="card">        
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2F1iteraltrash54ec07eedc638.jpg?1524738622708" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Short description about your pet.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fwallhaven-235456.jpg?1521475221294" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+     </main>
+                                                                       <!-- MAIN 2 -->
+     <main class="main2">
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>.tare siuq des suirav dnefiele euqen te maid tu cenoD .sutcul cen sutcel siuq sutcul siruaM .lev mutnemref mes euqsetnellep tu ,anru repmes ereusop naeneA .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(1).jpg?1521402035661" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
+        <h2 class="card-title">NAME</h2>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+          <a target="_blank" href="templateanunt.html">Afla mai mult.</a>
+        </div>
+      </div>
+    
+    
+    </main>
+    
+    <aside>
+      <div style="position:sticky; position: -webkit-sticky; top:0;">
+      <h2>  SEX  </h2>
+      <form>
+        <input type="radio" name="gender" value="male" checked> Mascul<br>
+        <input type="radio" name="gender" value="female"> Femela<br>
+        <input type="radio" name="gender" value="other"> Altceva  
+      </form>
+
+      <hr>
+      <br>
+      <br>
+      <h2>  PRET  </h2>
+      <form>
+        <input type="radio" name="pret" value="Adoptie" checked> Adoptie<br>
+        <input type="radio" name="pret" value="200"> &lt;200<br>
+        <input type="radio" name="pret" value="600"> 200 - 600  
+      </form>
+      <hr>
+      <br>
+      <br>
+      <br>
+      <h2>
+        LOCATIE
+      </h2>
+      <select style="height: 45px;">
+                  <option value="0">Judet</option>
+                  <option value="Alba">Alba</option>
+                  <option value="Arad">Arad</option>
+                  <option value="Arges">Arges</option>
+                  <option value="Bacau">Bacau</option>
+                  <option value="Bihor">Bihor</option>
+                  <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                  <option value="Botosani">Botosani</option>
+                  <option value="Brasov">Brasov</option>
+                  <option value="Braila">Braila</option>
+                  <option value="Bucuresti">Bucuresti</option>
+                  <option value="Buzau">Buzau</option>
+                  <option value="Caras Severin">Caras Severin</option>
+                  <option value="Calarasi">Calarasi</option>
+                  <option value="Cluj">Cluj</option>
+                  <option value="Constanta">Constanta</option>
+                  <option value="Covasna">Covasna</option>
+                  <option value="Dambovita">Dambovita</option>
+                  <option value="Dolj">Dolj</option>
+                  <option value="Galati">Galati</option>
+                  <option value="Giurgiu">Giurgiu</option>
+                  <option value="Gorj">Gorj</option>
+                  <option value="Harghita">Harghita</option>
+                  <option value="Hunedoara">Hunedoara</option>
+                  <option value="Ialomita">Ialomita</option>
+                  <option value="Iasi">Iasi</option>
+                  <option value="Ilfov">Ilfov</option>
+                  <option value="Maramures">Maramures</option>
+                  <option value="Mehedinti">Mehedinti</option>
+                  <option value="Mures">Mures</option>
+                  <option value="Neamt">Neamt</option>
+                  <option value="Olt">Olt</option>
+                  <option value="Prahova">Prahova</option>
+                  <option value="Satu Mare">Satu Mare</option>
+                  <option value="Salaj">Salaj</option>
+                  <option value="Sibiu">Sibiu</option>
+                  <option value="Suceava">Suceava</option>
+                  <option value="Teleorman">Teleorman</option>
+                  <option value="Timis">Timis</option>
+                  <option value="Tulcea">Tulcea</option>
+                  <option value="Vaslui">Vaslui</option>
+                  <option value="Valcea">Valcea</option>
+                  <option value="Vrancea">Vrancea</option>
+      </select>
+      <br>
+      <br>
+      <br>
+      <button id="filtreaza" style="background: #2A363B;">
+        Filtreaza
+      </button>
+    </div>
+    </aside>
+  </div> 
+    <!--\BODY-->
+    
+    
+    <!-- back to top button -->
+    <button onclick="topFunction()" class="back-to-top-button" id="myBtn" title="Go to top">Top</button>
+       
+    <!--LOGIN & SIGNUP -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="action_page.php">
+          <h1>Logare</h1>
+          <p>Introduceti emailul si parola.</p>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Parola" name="psw" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="loginbtn">Logare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="signup" class="modal">
+      <span onclick="document.getElementById('signup').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content" action="action_page.php">
+          <h1>Inregistrare</h1>
+          <p>Completati acest formular pentru a va inregistra.</p>
+          
+          <label for="nume"><b>Nume</b></label>
+          <input type="text" placeholder="Username" name="username" required>  
+        
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emailul dvs." name="email" required>
+
+          <label for="psw"><b>Parola</b></label>
+          <input type="password" placeholder="Scrieti noua parola" name="psw" required>
+
+          <label for="psw-repeat"><b>Repetati parola</b></label>
+          <input type="password" placeholder="Rescrieti noua parola" name="psw-repeat" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="submit" class="signupbtn">Inregistrare</button>
+          </div>
+      </form>
+    </div>rm>
+    </div>
+  </body>
+
+</html>4

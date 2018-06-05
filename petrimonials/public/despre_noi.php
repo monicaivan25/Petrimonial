@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Despre noi</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+    <style>
+       .bg {
+        background-image: url("https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FBEEP.png?1521570126151");
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+.gallery {
+    position: relative;
+    float: left;
+    width: 276px;
+    height: 200px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+      
+.overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+      }
+
+.gallery:hover .overlay {
+        bottom: 0;
+        height: 100%;
+}
+</style>
+    
+    </head>
+  
+  <body class="bg">
+  </body>
+
+</html>
