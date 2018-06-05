@@ -194,14 +194,14 @@
   
   <body>
    <header class="navigation-bar">
-      <a  href="home.html">
+      <a  href="home.php">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
       </a>
     
-      <a class="bar-item" href="monte.html">Monte</a>
-      <a class="bar-item" href="pui2.html">Vanzari pui</a>
-      <a class="bar-item" href="anunt.html">Adauga anunt</a>
-      <a class="bar-item" href="contact.html">Contact</a>
+      <a class="bar-item" href="monte.php">Monte</a>
+      <a class="bar-item" href="pui2.php">Vanzari pui</a>
+      <a class="bar-item" href="anunt.php">Adauga anunt</a>
+      <a class="bar-item" href="contact.php">Contact</a>
      
       <!--Login/signup Menu-->
       <div class="dropdown" style="float:right;">
@@ -311,7 +311,7 @@
         <h2 class="card-title">NAME</h2>
         <div class="card-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
         </div>
         
       </div>
@@ -320,7 +320,7 @@
         <h2 class="card-title">NAME</h2>
         <div class="card-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
         </div>
     </div>
             
@@ -333,7 +333,7 @@
         <h2 class="card-title">NAME</h2>
         <div class="card-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
         </div>
         
       </div>
@@ -342,7 +342,7 @@
         <h2 class="card-title">NAME</h2>
         <div class="card-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.html">Afla mai mult.</a>
+          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
         </div>
     </div>
             

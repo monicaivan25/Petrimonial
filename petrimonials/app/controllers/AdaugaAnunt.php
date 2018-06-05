@@ -18,7 +18,7 @@
         $descriere = $_POST['descriere'];
         //if connected then Select Database.
         //$db=mysql_select_db("tw_2018",$con);
-        $target_dir = "C:/xampp/htdocs/petrimonials/app/models/uploads/";
+        $target_dir = "E:/xampp/htdocs/petrimonials/app/models/uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -34,7 +34,7 @@
             }
         }
         // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 500000000) {
+        if ($_FILES["fileToUpload"]["size"] > 50000000000000000000) {
             $_SESSION['Error'] = "Ne pare rau, dimensiunea pozei este prea mare.";
             $uploadOk = 0;
         }
@@ -52,7 +52,8 @@
           } else 
           $result = $modelcon -> insertDataNoPic($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
         }
-
+    $this->view('home/anuntAdaugat');
+    $modelcon->closeCon();
     }
   }
 

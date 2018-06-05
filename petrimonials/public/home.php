@@ -50,14 +50,14 @@
   
   <body>
     <header class="navigation-bar">
-      <a  href="home.html">
+      <a  href="home.php">
         <img class="logo" src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FpetrimonialeALB2.png?1520622937853" height = "35px" >
       </a>
     
-      <a class="bar-item" href="monte.html">Monte</a>
-      <a class="bar-item" href="pui2.html">Vanzari pui</a>
-      <a class="bar-item" href="anunt.html">Adauga anunt</a>
-      <a class="bar-item" href="contact.html">Contact</a>
+      <a class="bar-item" href="monte.php">Monte</a>
+      <a class="bar-item" href="pui2.php">Vanzari pui</a>
+      <a class="bar-item" href="anunt.php">Adauga anunt</a>
+      <a class="bar-item" href="contact.php">Contact</a>
      
       <!--Login/signup Menu-->
       <div class="dropdown" style="float:right;">
@@ -100,7 +100,7 @@
  <!-- Patrate colorate -->   
     <hr style="width:100%; color:white; border-color:white;">
     <div class="container">
-      <a href="despre_noi.html">
+      <a href="despre_noi.php">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fhome.png?1520685517090" alt="Home" class="image">
         <div class="overlay about-us">
           <div class="text">
@@ -112,7 +112,7 @@
     </div>
     
     <div class="container">
-      <a href="monte.html">
+      <a href="monte.php">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fmonte.png?1520685631928" alt="Monte" class="image">
         <div class="overlay anunturi-monta">
           <div class="text">
@@ -124,7 +124,7 @@
     </div>
 
     <div class="container">
-      <a href="pui2.html">
+      <a href="pui2.php">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fpui.png?1520684329548" alt="Pui" class="image">
         <div class="overlay anunturi-pui">
           <div class="text">
@@ -136,7 +136,7 @@
     </div>
 
     <div class="container">
-      <a href="contact.html">
+      <a href="contact.php">
         <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fcontact.png?1520684330441" alt="Contact" class="image">
         <div class="overlay contact">
           <div class="text">
