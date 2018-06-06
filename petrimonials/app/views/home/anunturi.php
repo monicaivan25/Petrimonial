@@ -617,7 +617,7 @@ main {
       
       <h4 class="text-anunt1" >Nume anunt: <span id="titluAnunt">
         <?php
-          echo $data[5];
+          echo $data[0][5];
         ?>
       </span></h4>
       
@@ -625,11 +625,11 @@ main {
     </div>
     <div class="hr-container-first">
       <h4 class="text-anunt1">Categoria: 
-        <?php echo $data[10]?></h4>
+        <?php echo $data[0][10]?></h4>
       <hr>
     </div>  
     <?php
-      $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[12];
+      $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[0][12];
     ?>
 <main>   
 <!-- imaginea cu animalul respectiv -->
@@ -648,22 +648,22 @@ main {
 
     <div class="hr-container-first">
       <h4>
-        <span>PRET : <?php echo $data[9]; ?></span><br>
+        <span>PRET : <?php echo $data[0][9]; ?></span><br>
       </h4>
     </div>
     <div class="hr-container-first">
       <h4>
-        <span>ANIMAL: <?php echo $data[6] . ', ' . $data[8]; ?></span><br>
+        <span>ANIMAL: <?php echo $data[0][6] . ', ' . $data[0][8]; ?></span><br>
       <h4>  
     </div>
     <div class="hr-container-first">
       <h4>
-        <span><?php echo $data[3]. ', ' .$data[4]; ?></span><br>
+        <span><?php echo $data[0][3]. ', ' .$data[0][4]; ?></span><br>
       </h4>
     </div>
     <div class="hr-container-first">
       <h4>
-        <span><?php echo $data[11]; ?></span>
+        <span><?php echo $data[0][11]; ?></span>
       </h4>
     </div>
 
@@ -678,28 +678,37 @@ main {
 <!-- anunturi similare --> 
 <div class="titlu">
   <div class="text--titlu">
-      <h4 class="text-anunt">Anunturi similare</h4>      
+      <h4 class="text-anunt">Anunturi similare din apropiere</h4>      
       <hr class="myhr">
   </div>
 </div>
  
   <div class="anunt1">
-
-      <div class="card1">        
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
+      <div class="card1">     
+      <?php $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[1][12];
+        $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[1][0];
+      ?>
+   
+        <img src="<?php echo $img;?>" class="card-img">
+        <h2 class="card-title"><?php echo $data[1][5]?></h2>
         <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
+          <h3><?php echo $data[1][3]. ', ' .$data[1][4].', '.$data[1][9];?></h3>
+          <p><?php echo $data[1][11];?></p>
+          <a target="_blank" href="<?php echo $link;?>">Afla mai mult.</a>
         </div>
         
       </div>
       <div class="card2">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
+      <?php $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[2][12];
+        $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[2][0];
+      ?>
+
+         <img src="<?php echo $img;?>" class="card-img">
+        <h2 class="card-title"><?php echo $data[2][5]?></h2>
         <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
+          <h3><?php echo $data[2][3]. ', ' .$data[2][4].', '.$data[2][9];?></h3>
+          <p><?php echo $data[2][11];?></p>
+          <a target="_blank" href="<?php echo $link;?>">Afla mai mult.</a>
         </div>
     </div>
             
@@ -707,21 +716,30 @@ main {
     
   <div class="anunt2">
 
-      <div class="card3">        
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
+      <div class="card3">   
+      <?php $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[3][12];
+        $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[3][0];
+      ?>
+     
+        <img src="<?php echo $img;?>" class="card-img">
+        <h2 class="card-title"><?php echo $data[3][5]?></h2>
         <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
+          <h3><?php echo $data[3][3]. ', ' .$data[3][4].', '.$data[3][9];?></h3>
+          <p><?php echo $data[3][11];?></p>
+          <a target="_blank" href="<?php echo $link;?>">Afla mai mult.</a>
         </div>
         
       </div>
       <div class="card4">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
+        <?php $img = "http://localhost:81/petrimonials/app/models/uploads/".$data[4][12];
+          $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[4][0];
+        ?>
+        <img src="<?php echo $img;?>" class="card-img">
+        <h2 class="card-title"><?php echo $data[4][5]?></h2>
         <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
+          <h3><?php echo $data[4][3]. ', ' .$data[4][4].', '.$data[4][9];?></h3>
+          <p><?php echo $data[4][11];?></p>
+          <a target="_blank" href="<?php echo $link;?>">Afla mai mult.</a>
         </div>
     </div>
             
