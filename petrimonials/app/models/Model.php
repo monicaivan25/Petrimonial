@@ -55,5 +55,14 @@
 		    	}		    	
 		    return $row;
 		}
+		public function iaID($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere){
+			global $conn;
+			$row='';
+		    if ($result=mysqli_query($conn,"SELECT id FROM `anunturi` WHERE numar_telefon='".$numar_telefon."' and oras='".$oras."' and judet='".$judet."' and nume_animal='".$nume_animal."' and tip_animal = '" . $tip_animal."' and sex_animal='". $sex_animal."' and rasa='".$rasa."' and pret='". $pret."' and tip_anunt='". $tip_anunt."' and descriere='". $descriere."'"))
+		    	{
+		    		$row=mysqli_fetch_row($result);
+		    	}		
+		    return $row;
+		}
 	}
 ?>
