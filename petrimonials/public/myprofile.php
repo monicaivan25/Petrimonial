@@ -1,3 +1,8 @@
+<?php
+     session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -213,29 +218,7 @@
       <button onclick="topFunction()" class="back-to-top-button" id="myBtn" title="Go to top">Top</button>
 
       <!--Search Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-search"></i></button>
-            <div class="search-bar"> 
-                
-              <div class="search-crit">
-                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
-              </div>    
-              
-              <div class="search-crit">
-                <select>
-                    <option value="0">Categorie</option>
-                    <option value="Monte">Monte</option>
-                    <option value="Vanzari">Vanzari</option>
-                    <option value="Adoptii">Adoptii</option>
-                </select>
-              </div>
-              
-              <div class="search-crit">
-                <input type="text" placeholder="Cauta aici">
-              </div>
-  
-            </div>
-      </div>  
+     
     </header>
     
 
@@ -243,113 +226,45 @@
     
 <!-- BOOTY -->
 <div class="boody">
-      <div class="titlu1">
-        <div class="text--titlu">
-            <h4 class="text-anunt">Date personale</h4>
-            <hr>
-        </div>
-      </div>
       
-      <div class="main1">
-        
-        <div class="image">
-          <div class="container">
-           <a target="_blank">
-            </a>
-          </div>
-        </div>
-        
-        <div class="desc">
 
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-
-        </div>
-        
-        <div class="titlu2">
-          <div class="text--titlu2">
-            <h4>Adresa</h4>
-            <hr id="hr2">
-          </div>
-        </div>
-        
-        <div class="desc1">
-  
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-            <input type="text">
-            <label> ceva</label>
-
-        </div>
-         
-      </div>
-      
-      <div class="titlu3">
-        <div class="text--titlu">
-        <h4 class="text-anunt">Anunturile tale</h4>      
-        <hr>
-       </div>
-    </div>
- 
-      
-<div class="anunturi">
-  
-  <div class="anunt1">
-
-      <div class="card1">        
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
-        </div>
-        
-      </div>
-      <div class="card2">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
-        </div>
-    </div>
-            
-  </div>
-    
-  <div class="anunt2">
-
-      <div class="card3">        
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
-        </div>
-        
-      </div>
-      <div class="card4">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="https://petrimonials.glitch.me/templateanunt.php">Afla mai mult.</a>
-        </div>
-    </div>
-            
-  </div>
- </div>
+<ul id = "lista">
+</ul>
       
       
 </div>
     
+<script type="text/javascript">
+  
+  var list = document.getElementById("lista");
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://localhost:81/petrimonials/public/AnunturiProfil/anunturileMele");
+
+        xhr.addEventListener("load", function loadCallback() {
+            switch (xhr.status) {
+                case 200:
+                    let obj=JSON.parse(xhr.response);
+                    obj.forEach(function (elm){
+                      let li = document.createElement("li");
+                      let link = document.createElement("a");
+                      link.href="http://localhost:81/petrimonials/public/Anunturi/get/"+elm.id;
+                      link.innerHTML=elm.nume_animal;
+                      li.appendChild(link);
+                      list.appendChild(li);
+                    });
+                    break;
+                case 404:
+                    console.log("Oups! Not found");
+                    break;
+            }
+        });
+
+        xhr.addEventListener("error", function errorCallback() {
+            console.log("Network error");
+        });
+
+        xhr.send();
+</script>
     
     
     

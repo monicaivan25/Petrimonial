@@ -1,11 +1,12 @@
 <?php
+session_start();
   class AdaugaAnunt extends Controller
   {
     public function addAnunt()
     {
         $modelcon = $this->model('Model');
       
-
+        $email = $_SESSION['email'];
         $numar_telefon = $_POST['numar_telefon'];
         $oras = $_POST['oras'];
         $judet = $_POST['judet'];
@@ -18,7 +19,7 @@
         $descriere = $_POST['descriere'];
         //if connected then Select Database.
         //$db=mysql_select_db("tw_2018",$con);
-        $target_dir = "C:/xampp/htdocs/petrimonials/app/models/uploads/";
+        $target_dir = "E:/xampp/htdocs/petrimonials/app/models/uploads/";
        
         $target_path = strval(rand(1,1000000)) . basename($_FILES["fileToUpload"]["name"]);
          $target_file = $target_dir . $target_path;
@@ -49,15 +50,13 @@
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk != 0) {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-              $result = $modelcon -> insertData($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere, $target_path);
+              $result = $modelcon -> insertData($email, $numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere, $target_path);
             
           } else 
-          $result = $modelcon -> insertDataNoPic($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
+          $result = $modelcon -> insertDataNoPic($email, $numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
         }
         $data = $modelcon -> iaID($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
    
-
- //  print_r($data);
         $this->view('home/anuntAdaugat', $data);
         $modelcon->closeCon();
     }

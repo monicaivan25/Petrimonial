@@ -158,29 +158,7 @@
         <?php  } ?> 
       
       <!--Search Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-search"></i></button>
-            <div class="search-bar"> 
-                
-              <div class="search-crit">
-                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
-              </div>    
-              
-              <div class="search-crit">
-                <select>
-                    <option value="0">Categorie</option>
-                    <option value="Monte">Monte</option>
-                    <option value="Vanzari">Vanzari</option>
-                    <option value="Adoptii">Adoptii</option>
-                </select>
-              </div>
-              
-              <div class="search-crit">
-                <input type="text" placeholder="Cauta aici">
-              </div>
-  
-            </div>
-      </div>  
+      
     </header>
     
     <!-- back to top button -->
@@ -204,13 +182,13 @@
       <div class="formular-container">
           
           <label for="numar_telefon">Numarul tau de telefon</label>
-          <input type="text" placeholder="Telefon" name = "numar_telefon">
+          <input type="text" placeholder="Telefon" name = "numar_telefon" required>
 
           <label for="subiect">Oras</label>
-          <input type="text" placeholder="Oras" name = "oras">
+          <input type="text" placeholder="Oras" name = "oras" required>
           
           <label for="subiect">Judet</label>
-          <input type="text" placeholder="Judet" name = "judet">
+          <input type="text" placeholder="Judet" name = "judet" required>
       </div>
         
       <div class="hr-container">
@@ -240,7 +218,7 @@
           <input type="text" placeholder="Rasa, daca stii :)" name = "rasa">
           
           <label for="pret">Pret (optional)</label>
-          <input type="text" placeholder="Pret,  lei" name = "pret">  
+          <input type="text" placeholder="Pret,  lei" name = "pret" required>  
           
           <label for="tipanunt">Tipul anuntului</label>
           <select name = "tip_anunt">
@@ -329,7 +307,7 @@
     </div>
     
     <script>
-
+      
     </script>
     </body>
 </html>

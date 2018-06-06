@@ -367,40 +367,7 @@
       <a class="bar-item" href="../../public/pui2.php">Vanzari pui</a>
       <a class="bar-item" href="../../public/anunt.php">Adauga anunt</a>
       <a class="bar-item" href="../../public/contact.php">Contact</a>
-     
-      <!--Login/signup Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
-          <div class="dropdown-content">
-             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
-             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
-          </div>
-      </div>  
-      
-      <!--Search Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-search"></i></button>
-            <div class="search-bar"> 
-                
-              <div class="search-crit">
-                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
-              </div>    
-              
-              <div class="search-crit">
-                <select>
-                    <option value="0">Categorie</option>
-                    <option value="Monte">Monte</option>
-                    <option value="Vanzari">Vanzari</option>
-                    <option value="Adoptii">Adoptii</option>
-                </select>
-              </div>
-              
-              <div class="search-crit">
-                <input type="text" placeholder="Cauta aici">
-              </div>
-  
-            </div>
-      </div>  
+    
     </header>
 
 

@@ -80,30 +80,7 @@
                </div>
             </div>  
         <?php  } ?>
-      <!--Search Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-search"></i></button>
-            <div class="search-bar"> 
-                
-              <div class="search-crit">
-                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
-              </div>    
-              
-              <div class="search-crit">
-                <select>
-                    <option value="0">Categorie</option>
-                    <option value="Monte">Monte</option>
-                    <option value="Vanzari">Vanzari</option>
-                    <option value="Adoptii">Adoptii</option>
-                </select>
-              </div>
-              
-              <div class="search-crit">
-                <input type="text" placeholder="Cauta aici">
-              </div>
-  
-            </div>
-      </div>  
+       
     </header>
  <hr style="width:100%; color:white; border-color:white;">
     <div class="contact-form-container">

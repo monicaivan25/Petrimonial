@@ -1,14 +1,13 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Anunturi pui</title>
+    <title>Monte</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="script.js" defer></script>
-
     <style>
     body{
       position: relative;
@@ -23,10 +22,10 @@
     grid-gap: 1.5em;
       }
       
-    .main1{
+    #main1{
       grid-area: main1;
       }
-    .main2{
+    #main2{
       grid-area: main2;
       }
       
@@ -37,7 +36,7 @@
                                ". main3";
           grid-gap: 1.4em;
         }
-        .main2{
+        #main2{
           grid-area: main3; 
         }
         aside {
@@ -127,6 +126,7 @@
       <a class="bar-item" href="anunt.php">Adauga anunt</a>
       <a class="bar-item" href="contact.php">Contact</a>
      
+      
     <!--Login/signup Menu-->
          <?php
         session_start();
@@ -151,160 +151,54 @@
             </div>  
         <?php  } ?>
 
-
-      <!--Search Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-search"></i></button>
-            <div class="search-bar"> 
-                
-              <div class="search-crit">
-                  <button style="background-color:#2A363B;"><i class="fa fa-search"></i></button>
-              </div>    
-              
-              <div class="search-crit">
-                <select>
-                    <option value="0">Categorie</option>
-                    <option value="Monte">Monte</option>
-                    <option value="Vanzari">Vanzari</option>
-                    <option value="Adoptii">Adoptii</option>
-                </select>
-              </div>
-              
-              <div class="search-crit">
-                <input type="text" placeholder="Cauta aici">
-              </div>
-  
-            </div>
-      </div>  
+      
+     
     </header>
     
     
     <!--BODY-->
    <div class="boody">
                                                                        <!-- MAIN 1 -->
-    <main class="main1">
+    <main id="main1">
 
-      <div class="card">        
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2FUntitled.png?1521400892099" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2F1iteraltrash54ec07eedc638.jpg?1524738622708" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Short description about your pet.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fwallhaven-235456.jpg?1521475221294" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-    
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
      </main>
                                                                        <!-- MAIN 2 -->
-     <main class="main2">
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>.tare siuq des suirav dnefiele euqen te maid tu cenoD .sutcul cen sutcel siuq sutcul siruaM .lev mutnemref mes euqsetnellep tu ,anru repmes ereusop naeneA .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(1).jpg?1521402035661" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://cdn.glitch.com/fb12d49e-1df5-4752-a09a-efc4da5a070c%2Fimages%20(6).jpg?1521402259191" alt="" class="card-img">
-        <h2 class="card-title">NAME</h2>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
-          <a target="_blank" href="templateanunt.php">Afla mai mult.</a>
-        </div>
-      </div>
-    
-    
+     <main id="main2">
+ 
     </main>
     
     <aside>
       <div style="position:sticky; position: -webkit-sticky; top:0;">
-      <h2>  SEX  </h2>
+        <h2>  TIP ANIMAL  </h2>
       <form>
-        <input type="radio" name="gender" value="male" checked> Mascul<br>
-        <input type="radio" name="gender" value="female"> Femela<br>
-        <input type="radio" name="gender" value="other"> Altceva  
+        <input type="radio" name="type" value="caine" checked> Caine<br>
+        <input type="radio" name="type" value="pisica"> Pisica <br> 
       </form>
 
       <hr>
       <br>
-      <br>
-      <h2>  PRET  </h2>
+
+      <h2>  RASA  </h2>
       <form>
-        <input type="radio" name="pret" value="Adoptie" checked> Adoptie<br>
-        <input type="radio" name="pret" value="200"> &lt;200<br>
-        <input type="radio" name="pret" value="600"> 200 - 600  
+        <input type="text" name="rasa" id="rasaAnimal">
       </form>
+
       <hr>
       <br>
+      <h2>  SEX  </h2>
+      <form>
+        <input type="radio" name="gender" value="m" checked> Mascul<br>
+        <input type="radio" name="gender" value="f"> Femela<br> 
+      </form>
+
+      <hr>
       <br>
       <br>
       <h2>
         LOCATIE
       </h2>
-      <select style="height: 45px;">
-                  <option value="0">Judet</option>
+      <select id="locatie" style="height: 45px;">
+                  <option value="a">Judet</option>
                   <option value="Alba">Alba</option>
                   <option value="Arad">Arad</option>
                   <option value="Arges">Arges</option>
@@ -350,8 +244,7 @@
       </select>
       <br>
       <br>
-      <br>
-      <button id="filtreaza" style="background: #2A363B;">
+      <button id="filtreaza"  onclick="filter()" style="background: #2A363B;">
         Filtreaza
       </button>
     </div>
@@ -432,6 +325,214 @@
 
 
     </div>
+
   </body>
+  <footer>
+  <script>
+
+    function filter(){
+      let rasa;
+      let gender;
+      let pret ='';
+      let tip;
+      let locatie = document.getElementById("locatie").value;
+      let radios = document.getElementsByName('type');
+      for (var i = 0, length = radios.length; i < length; i++)
+      {
+       if (radios[i].checked)
+       {
+        tip=radios[i].value;
+        break;
+       }
+      }
+
+      rasa = document.getElementById('rasaAnimal').value;
+
+      radios = document.getElementsByName('gender');
+      for (var i = 0, length = radios.length; i < length; i++)
+      {
+       if (radios[i].checked)
+       {
+        gender=radios[i].value;
+        break;
+       }
+      }
+      /*
+      radios = document.getElementsByName('pret');
+      for (var i = 0, length = radios.length; i < length; i++)
+      {
+       if (radios[i].checked)
+       {
+        pret=radios[i].value;
+        break;
+       }
+      }
+      */
+      let obj;
+
+      if(rasa !== '' && locatie !== 'a'){
+        obj = {
+        gender: `${gender}`,
+        pret: `${pret}`,
+        tip: `${tip}`,
+        rasa: `${rasa}`,
+        locatie: `${locatie}`
+      };
+      } else if(rasa !== '' && locatie == 'a')
+      {
+        obj = {
+        gender: `${gender}`,
+        pret: `${pret}`,
+        tip: `${tip}`,
+        rasa: `${rasa}`
+      };
+      } else if(rasa == '' && locatie !== 'a')
+      {
+        obj = {
+        gender: `${gender}`,
+        pret: `${pret}`,
+        tip: `${tip}`,
+        locatie: `${locatie}`
+      };
+      } else if(rasa == '' && locatie == 'a')
+      {
+        obj = {
+        gender: `${gender}`,
+        pret: `${pret}`,
+        tip: `${tip}`
+      };
+      } 
+
+      let k = document.getElementById("main1");
+      k.innerHTML = '';
+      k = document.getElementById("main2");
+      k.innerHTML = '';
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.open("POST", "http://localhost:81/petrimonials/public/GetAnunt/filtreazaAnunturiMonte");
+
+      xhr.addEventListener("load", function loadCallback() {
+          switch (xhr.status) {
+              case 200:
+                  let object=JSON.parse(xhr.response);
+                  putOnScreen(object);
+                  break;
+              case 404:
+                  console.log("Oups! Not found");
+                  break;
+          }
+      });
+
+      xhr.addEventListener("error", function errorCallback() {
+          console.log("Network error");
+      });
+
+      xhr.send(JSON.stringify(obj));
+
+    };
+
+
+      function putOnScreen(obj){
+        let lim=0;
+        if(obj.length%2==0)
+        {
+          lim=obj.length/2;
+        }else{
+          lim=(obj.length+1)/2;
+        }
+        
+        let inc1=0;
+        let inc2=0;
+        obj.slice(0,lim).forEach(function(elem){
+          
+          inc1+=1;
+          let card = document.createElement("div");
+          card.classList.add("card");
+          let image = document.createElement("img");
+          image.classList.add("card-img");
+          image.src="http://localhost:81/petrimonials/app/models/uploads/"+elem.path;
+          image.alt="poza anunt";
+          let title = document.createElement("h2");
+          title.classList.add("card-title");
+          title.innerHTML = elem.nume_animal;
+          let content = document.createElement("div");
+          content.classList.add("card-content");
+          let paragraf = document.createElement("p");
+          paragraf.innerHTML = elem.descriere;
+          let link = document.createElement("a");
+          link.target = "_blank";
+          link.href="localhost:81/petrimonials/public/Anunturi/get/"+elem.id;
+          link.innerHTML="Afla mai mult.";
+          content.appendChild(paragraf);
+          content.appendChild(link);
+          card.appendChild(image);
+          card.appendChild(title);
+          card.appendChild(content);
+          let k = document.getElementById("main1");
+          if(typeof k !=="undefined")
+            {k.appendChild(card);}
+        });
+
+        obj.slice(lim,obj.length).forEach(function(elem){
+
+          inc2+=1;
+
+          let card = document.createElement("div");
+          card.classList.add("card");
+          let image = document.createElement("img");
+          image.classList.add("card-img");
+          image.src="http://localhost:81/petrimonials/app/models/uploads/"+elem.path;
+          image.alt="poza anunt";
+          let title = document.createElement("h2");
+          title.classList.add("card-title");
+          title.innerHTML = elem.nume_animal;
+          let content = document.createElement("div");
+          content.classList.add("card-content");
+          let paragraf = document.createElement("p");
+          paragraf.innerHTML = elem.descriere;
+          let link = document.createElement("a");
+          link.target = "_blank";
+          link.href="localhost:81/petrimonials/public/Anunturi/get/"+elem.id;
+          link.innerHTML="Afla mai mult.";
+          content.appendChild(paragraf);
+          content.appendChild(link);
+          card.appendChild(image);
+          card.appendChild(title);
+          card.appendChild(content);
+          let k = document.getElementById("main2");
+          if(typeof k !=="undefined")
+            {k.appendChild(card);}
+        });
+      };
+
+      function getCards(){
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "http://localhost:81/petrimonials/public/GetAnunt/getAnunturiMonte");
+
+        xhr.addEventListener("load", function loadCallback() {
+            switch (xhr.status) {
+                case 200:
+                    let obj=JSON.parse(xhr.response);
+                    putOnScreen(obj);
+                    break;
+                case 404:
+                    console.log("Oups! Not found");
+                    break;
+            }
+        });
+
+        xhr.addEventListener("error", function errorCallback() {
+            console.log("Network error");
+        });
+
+        xhr.send();
+      };
+
+      window.onload=getCards();
+
+    </script>
+    <footer>
 
 </html>

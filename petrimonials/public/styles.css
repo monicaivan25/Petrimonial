@@ -175,6 +175,7 @@ button:focus {
     margin: 0 !important;
 }
 
+
 .modal {
     display: none; 
     position: fixed; 
@@ -258,8 +259,6 @@ hr {
     max-height: 70px;
     color: black;
 }
-
-
 .dropbtn:hover{
     color: black;
 }

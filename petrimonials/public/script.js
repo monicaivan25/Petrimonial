@@ -111,7 +111,7 @@ function Logare(){
 				    		if (xhr.response == email){
 				    			console.log("login reusit");
 				    			document.getElementById('login').style.display='none';
-				    		 	window.location.assign('http://localhost:81/petrimonials/public/myProfile.php');
+				    		 	window.location.assign('http://localhost:81/petrimonials/public/home.php');
 				    			document.getElementById('loginInregistrare').style.display='none';
 				    		} else if (xhr.response == 'Parola incorecta'){
 				    			console.log("Parola incorecta");
