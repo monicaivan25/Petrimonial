@@ -46,5 +46,14 @@
 		   
 		    return $result;
 		}
+		
+		public function iaAnunt($id){
+			global $conn;
+		    if ($result=mysqli_query($conn,"SELECT * FROM `anunturi` WHERE id=".$id))
+		    	{
+		    		$row=mysqli_fetch_row($result);
+		    	}		    	
+		    return $row;
+		}
 	}
 ?>
