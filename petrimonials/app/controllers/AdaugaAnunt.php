@@ -18,8 +18,8 @@
         $descriere = $_POST['descriere'];
         //if connected then Select Database.
         //$db=mysql_select_db("tw_2018",$con);
-        $target_dir = "E:/xampp/htdocs/petrimonials/app/models/uploads/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_dir = "C:/xampp/htdocs/petrimonials/app/models/uploads/";
+        $target_file = $target_dir . strval(rand(1,1000000)) . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
