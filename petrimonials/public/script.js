@@ -92,8 +92,94 @@ function Inregistrare(){
             email: `${email}`
         }
 		xhr.send(JSON.stringify(payload));
-
-	
-      
+  
 }
+
+function Logare(){
+	var email = document.getElementById("email-id-log").value;
+	var parola = document.getElementById("parola-id-log").value;
+
+	let xhr = new XMLHttpRequest();
+
+	xhr.open("POST", "http://localhost:81/petrimonials/public/Logare/login");
+
+	xhr.addEventListener("load", function loadCallback() {
+					switch (xhr.status) {
+					    case 200:
+				    		console.log("Success, te-ai logat" + xhr.response);
+
+				    		if (xhr.response == email){
+				    			console.log("login reusit");
+				    			document.getElementById('login').style.display='none';
+				    		 	window.location.assign('http://localhost:81/petrimonials/public/myProfile.php');
+				    			document.getElementById('loginInregistrare').style.display='none';
+				    		} else if (xhr.response == 'Parola incorecta'){
+				    			console.log("Parola incorecta");
+				    			alert("Parola incorecta");
+				    			document.getElementById("parola-id-log").value = '';
+				    		} else {
+				    			console.log("Email incorect");
+				    			alert("Email incorect");
+				    			document.getElementById("email-id-log").value = '';
+				    		}
+
+							break;
+						case 404:
+							console.log("Oups! Not found");
+							break;
+	 				}
+	});
+
+	xhr.addEventListener("error", function errorCallback() {
+			    	console.log("Network error");
+	});
+
+	let payload = {
+		email: `${email}`,
+	    pass: `${parola}`
+	}
+	xhr.send(JSON.stringify(payload));
+	document.getElementById('signup').style.display='none';
+}
+
+function Delogare(){
+ 	
+ 	var email = document.getElementById("email-id-log").value;
+	var parola = document.getElementById("parola-id-log").value;
+
+	let xhr = new XMLHttpRequest();
+
+	xhr.open("POST", "http://localhost:81/petrimonials/public/Logare/delogin");
+
+	console.log("AM ajuns aici");
+
+	xhr.addEventListener("load", function loadCallback() {
+					switch (xhr.status) {
+					    case 200:
+				    		console.log("Success, te-ai delogat" + xhr.response);
+
+				    		if (xhr.response == 'deLogin') {
+				    			console.log("Ar trebui sa mearga");
+				    		}
+
+							break;
+						case 404:
+							console.log("Oups! Not found");
+							break;
+	 				}
+	});
+
+	xhr.addEventListener("error", function errorCallback() {
+			    	console.log("Network error");
+	});
+
+	window.location.assign("http://localhost:81/petrimonials/public/home.php");
+}
+
+function goToMyProfile(){
+
+	window.location.assign("http://localhost:81/petrimonials/public/myprofile.php");
+}
+
+
 

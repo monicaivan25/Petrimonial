@@ -18,7 +18,7 @@
         $descriere = $_POST['descriere'];
         //if connected then Select Database.
         //$db=mysql_select_db("tw_2018",$con);
-        $target_dir = "E:/xampp/htdocs/petrimonials/app/models/uploads/";
+        $target_dir = "C:/xampp/htdocs/petrimonials/app/models/uploads/";
        
         $target_path = strval(rand(1,1000000)) . basename($_FILES["fileToUpload"]["name"]);
          $target_file = $target_dir . $target_path;
@@ -56,6 +56,8 @@
         }
         $data = $modelcon -> iaID($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
    
+
+ //  print_r($data);
         $this->view('home/anuntAdaugat', $data);
         $modelcon->closeCon();
     }

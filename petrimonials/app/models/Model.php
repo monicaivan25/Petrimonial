@@ -46,7 +46,8 @@
 		   
 		    return $result;
 		}
-		
+
+
 		public function iaAnunt($id){
 			global $conn;
 		    if ($result=mysqli_query($conn,"SELECT * FROM `anunturi` WHERE id=".$id))
@@ -77,5 +78,56 @@
     		    }
 		    return $rows;
 		}
+	
+
+		public function insertUser($username, $password, $email){
+		    global $conn;
+
+		    $result=mysqli_query($conn,"INSERT INTO `users` ( `username`, `parola`, `email`) VALUES ('".$username."','".$password."','" .$email."')");
+		   
+		    return $result;
+		}
+
+		public function getEmail($email_user){
+			global $conn;
+
+		    $stmt = $conn->prepare("SELECT email FROM users where email like '%" . $email_user . "' ;");
+
+		    if (false === $stmt ) {
+		        die('prepare() failed: ' . htmlspecialchars($conn->error));
+		    }
+
+		    $stmt->execute();
+		    $result = $stmt -> get_result();
+		    $rows = mysqli_fetch_all ($result, MYSQLI_ASSOC);
+		    if ($rows == false){
+		    	return 1;
+		    }
+		    else {
+		    	return 0;
+		    }
+		}
+
+		public function getParola($password_user){
+			global $conn;
+
+		    $stmt = $conn->prepare("SELECT parola FROM users where parola like '%" . $password_user . "' ;");
+
+		    if (false === $stmt ) {
+		        die('prepare() failed: ' . htmlspecialchars($conn->error));
+		    }
+
+		    $stmt->execute();
+		    $result = $stmt -> get_result();
+		    $rows = mysqli_fetch_all ($result, MYSQLI_ASSOC);
+		    if ($rows == false){
+		    	return 1;
+		    }
+		    else {
+		    	return 0;
+		    }
+		}
+
+
 	}
 ?>

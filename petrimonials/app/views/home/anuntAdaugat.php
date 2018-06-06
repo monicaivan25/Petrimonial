@@ -409,14 +409,14 @@
 
     
     <div style="color: white;padding: 100px;height:100%;">
-    	<?php if( isset($_SESSION['Error']) )
-		{
-        	echo $_SESSION['Error'];
+      <?php if( isset($_SESSION['Error']) )
+    {
+          echo $_SESSION['Error'];
 
-        	unset($_SESSION['Error']);
+          unset($_SESSION['Error']);
 
-		}
-		?>
+    }
+    ?>
   <h2>
   <?php
     $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[0]

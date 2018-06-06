@@ -127,14 +127,29 @@
       <a class="bar-item" href="anunt.php">Adauga anunt</a>
       <a class="bar-item" href="contact.php">Contact</a>
      
-      <!--Login/signup Menu-->
-      <div class="dropdown" style="float:right;">
-          <button class="dropbtn"><i class="fa fa-reorder"></i></button>
-          <div class="dropdown-content">
-             <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
-             <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
-          </div>
-      </div>  
+    <!--Login/signup Menu-->
+         <?php
+        session_start();
+
+         if (isset($_SESSION['email'])){
+        ?>
+          <div class="dropdown" id="delogare" style="float:right;">
+           <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+            <div class="dropdown-content">
+             <button onclick="document.getElementById('delogin').style.display='block'" class="barbtn">Delogare</button>
+             <button onclick="document.getElementById('myprofile').style.display='block'" class="barbtn">Profilul meu</button>
+            </div>
+          </div>  
+
+        <?php } else { ?>
+           <div class="dropdown" id="loginInregistrare" style="float:right;">
+            <button class="dropbtn"><i class="fa fa-reorder"></i></button>
+             <div class="dropdown-content">
+                <button onclick="document.getElementById('login').style.display='block'" class="barbtn">Logare</button>
+                <button onclick="document.getElementById('signup').style.display='block'" class="barbtn">Inregistrare</button>
+               </div>
+            </div>  
+        <?php  } ?>
       
       <!--Search Menu-->
       <div class="dropdown" style="float:right;">
@@ -350,19 +365,19 @@
     <!--LOGIN & SIGNUP -->
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
-      <form class="modal-content" action="action_page.php">
+      <form class="modal-content">
           <h1>Logare</h1>
           <p>Introduceti emailul si parola.</p>
           
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Email" name="email" required>
+          <input type="text" placeholder="Email" name="email" id="email-id-log" required>
 
           <label for="psw"><b>Parola</b></label>
-          <input type="password" placeholder="Parola" name="psw" required>
+          <input type="password" placeholder="Parola" name="psw" id="parola-id-log" required>
 
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Inapoi</button>
-            <button type="submit" class="loginbtn">Logare</button>
+            <button type="button" class="loginbtn" onclick="Logare()" >Logare</button>
           </div>
       </form>
     </div>
@@ -391,6 +406,27 @@
           </div>
       </form>
     </div>
+
+    <div id="delogin" class="modal" style="display: none;">
+      <span onclick="document.getElementById('delogin').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content">
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('delogin').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="button" class="signupbtn" onclick="Delogare()" >Delogare</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="myprofile" class="modal" > 
+      <span onclick="document.getElementById('myprofile').style.display='none'" class="closebtn" title="Close Modal">&times;</span>
+      <form class="modal-content">
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('myprofile').style.display='none'" class="cancelbtn">Inapoi</button>
+            <button type="button" class="signupbtn" onclick=" goToMyProfile()">  Profilul meu </button>
+          </div>
+      </form>
+    </div>
+     
 
 
     </div>
