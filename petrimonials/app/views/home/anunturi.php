@@ -653,7 +653,7 @@ main {
     </div>
     <div class="hr-container-first">
       <h4>
-        <span>ANIMAL: <?php echo $data[0][6] . ', ' . $data[0][8]; ?></span><br>
+        <span>ANIMAL: <?php echo $data[0][6] . ', ' . $data[0][8].', '.$data[0][7]; ?></span><br>
       <h4>  
     </div>
     <div class="hr-container-first">
