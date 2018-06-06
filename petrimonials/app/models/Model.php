@@ -55,6 +55,7 @@
 		    	}		    	
 		    return $row;
 		}
+		
 		public function iaID($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere){
 			global $conn;
 			$row='';
@@ -63,6 +64,18 @@
 		    		$row=mysqli_fetch_row($result);
 		    	}		
 		    return $row;
+		}
+
+		public function iaAnuntSimilar($var=''){
+			global $conn;
+			$i=0;
+			$rows=[];
+		    if ($result=mysqli_query($conn,"SELECT * FROM `anunturi` WHERE tip_animal='".$var[6]."' and trim(lower(judet))=trim(lower('".$var[4]."')) and id<>'".$var[0]."'"))
+		    	{
+				 while ($row=mysqli_fetch_row($result))
+				    	array_push($rows, $row);
+    		    }
+		    return $rows;
 		}
 	}
 ?>
