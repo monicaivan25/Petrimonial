@@ -19,7 +19,9 @@
         //if connected then Select Database.
         //$db=mysql_select_db("tw_2018",$con);
         $target_dir = "C:/xampp/htdocs/petrimonials/app/models/uploads/";
-        $target_file = $target_dir . strval(rand(1,1000000)) . basename($_FILES["fileToUpload"]["name"]);
+       
+        $target_path = strval(rand(1,1000000)) . basename($_FILES["fileToUpload"]["name"]);
+         $target_file = $target_dir . $target_path;
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
@@ -47,7 +49,7 @@
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk != 0) {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-              $result = $modelcon -> insertData($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere, $target_file);
+              $result = $modelcon -> insertData($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere, $target_path);
             
           } else 
           $result = $modelcon -> insertDataNoPic($numar_telefon, $oras, $judet, $nume_animal, $tip_animal, $sex_animal, $rasa, $pret, $tip_anunt, $descriere);
