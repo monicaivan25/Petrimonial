@@ -418,9 +418,11 @@
 		}
 		?>
   <h2>
-  
+  <?php
+    $link = "http://localhost:81/petrimonials/public/Anunturi/get/".$data[0]
+  ?>
     Anunt adaugat!</h2> <h3>
-   Va puteti accesa anuntul <a href="templateanunt.html">aici</a>.
+   Va puteti accesa anuntul <a href="<?php echo $link;?>".>aici</a>.
     </h3> 
     </div>
     
