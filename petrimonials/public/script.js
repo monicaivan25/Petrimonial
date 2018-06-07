@@ -173,7 +173,7 @@ function Delogare(){
 			    	console.log("Network error");
 	});
 
-	window.location.assign("http://localhost:81/petrimonials/public/home.php");
+	window.location.assign("http://localhost:81/petrimonials/public/delogare.php");
 }
 
 function goToMyProfile(){
